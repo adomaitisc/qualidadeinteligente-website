@@ -6,18 +6,18 @@ function Social() {
   return (
     <ul className={s1.socialClass}>
       <li className={s1.socialItemClass}>
-        <a href={s1.social.instagram.url} target="_blank" rel="noreferrer">
-          <img src={s1.social.instagram.icon} alt="Instagram" />
+        <a href={s1.social.facebook.url} target="_blank" rel="noreferrer">
+          <img src={s1.social.facebook.icon} alt={s1.social.facebook.alt} />
         </a>
       </li>
       <li className={s1.socialItemClass}>
-        <a href={s1.social.facebook.url} target="_blank" rel="noreferrer">
-          <img src={s1.social.facebook.icon} alt="Facebook" />
+        <a href={s1.social.instagram.url} target="_blank" rel="noreferrer">
+          <img src={s1.social.instagram.icon} alt={s1.social.instagram.alt} />
         </a>
       </li>
       <li className={s1.socialItemClass}>
         <a href={s1.social.linkedin.url} target="_blank" rel="noreferrer">
-          <img src={s1.social.linkedin.icon} alt="LinkedIn" />
+          <img src={s1.social.linkedin.icon} alt={s1.social.linkedin.alt} />
         </a>
       </li>
     </ul>

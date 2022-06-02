@@ -1,5 +1,5 @@
-import ig from "../assets/Instagram.svg";
 import fb from "../assets/Facebook.svg";
+import ig from "../assets/Instagram.svg";
 import li from "../assets/LinkedIn.svg";
 
 export const section_01 = {
@@ -8,13 +8,13 @@ export const section_01 = {
   socialItemClass: "s1_social_item",
   contentClass: "s1_content",
   social: {
-    instagram: {
-      url: "https://instagram.com/qualidadeinteligente",
-      icon: ig,
-    },
     facebook: {
       url: "https://www.facebook.com/qualidadeinteligente",
       icon: fb,
+    },
+    instagram: {
+      url: "https://instagram.com/qualidadeinteligente",
+      icon: ig,
     },
     linkedin: {
       url: "https://www.linkedin.com/in/qualidadeinteligente",
@@ -108,8 +108,8 @@ export const section_04 = {
   content: {
     title: "Algumas palavras sobre nós",
   },
+  button: "Faça parte do nosso sucesso → ",
   testimonials: {
-    button: "Faça parte do nosso sucesso → ",
     testimonial1: {
       author: "Murilo de Lara",
       role: "Diretor - Sivercon Construtora",

@@ -15,32 +15,32 @@ function Testimonials() {
       <div>
         <ul className={s4.testimonialsClass}>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial1.author}</h7>
+            <h6>{s4.testimonials.testimonial1.author}</h6>
             <p>{s4.testimonials.testimonial1.role}</p>
             <p>{s4.testimonials.testimonial1.description}</p>
           </li>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial2.author}</h7>
+            <h6>{s4.testimonials.testimonial2.author}</h6>
             <p>{s4.testimonials.testimonial2.role}</p>
             <p>{s4.testimonials.testimonial2.description}</p>
           </li>
         </ul>
-        <button>{s4.testimonials.button}</button>
+        <button>{s4.button}</button>
       </div>
       <div>
         <ul className={s4.testimonialsClass}>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial3.author}</h7>
+            <h6>{s4.testimonials.testimonial3.author}</h6>
             <p>{s4.testimonials.testimonial3.role}</p>
             <p>{s4.testimonials.testimonial3.description}</p>
           </li>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial4.author}</h7>
+            <h6>{s4.testimonials.testimonial4.author}</h6>
             <p>{s4.testimonials.testimonial4.role}</p>
             <p>{s4.testimonials.testimonial4.description}</p>
           </li>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial5.author}</h7>
+            <h6>{s4.testimonials.testimonial5.author}</h6>
             <p>{s4.testimonials.testimonial5.role}</p>
             <p>{s4.testimonials.testimonial5.description}</p>
           </li>
@@ -49,12 +49,12 @@ function Testimonials() {
       <div>
         <ul className={s4.testimonialsClass}>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial6.author}</h7>
+            <h6>{s4.testimonials.testimonial6.author}</h6>
             <p>{s4.testimonials.testimonial6.role}</p>
             <p>{s4.testimonials.testimonial6.description}</p>
           </li>
           <li className={s4.testimonialsItemClass}>
-            <h7>{s4.testimonials.testimonial7.author}</h7>
+            <h6>{s4.testimonials.testimonial7.author}</h6>
             <p>{s4.testimonials.testimonial7.role}</p>
             <p>{s4.testimonials.testimonial7.description}</p>
           </li>

@@ -1,15 +1,11 @@
 import React from "react";
 
-import { section_01 } from "./Data";
+import { Section1 } from "./Section1";
 
 export default function index() {
   return (
     <>
-      <div>{section_01.title}</div>
-      <div>{section_01.title}</div>
-      <div>{section_01.title}</div>
-      <div>{section_01.title}</div>
-      <div>{section_01.title}</div>
+      <Section1 />
     </>
   );
 }

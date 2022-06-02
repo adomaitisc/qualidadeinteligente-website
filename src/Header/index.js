@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../assets/Qualidade.svg";
 
 export default function index() {
   return (
     <div className="header">
-      <div className="logo">Logo</div>
+      <img src={logo} alt="Qualidade Inteligente"></img>
       <ul className="navbar">
         <li className="item">Soluções</li>
         <li className="item">Quem Somos</li>

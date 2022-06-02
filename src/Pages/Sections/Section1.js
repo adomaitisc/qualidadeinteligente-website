@@ -1,6 +1,6 @@
 import React from "react";
 
-import { section_01 as s1 } from "./Data";
+import { section_01 as s1 } from "../Data";
 
 function Social() {
   return (
@@ -24,10 +24,20 @@ function Social() {
   );
 }
 
+function Content() {
+  return (
+    <div className={s1.contentClass}>
+      <h1>{s1.content.title}</h1>
+      <p>{s1.content.description}</p>
+    </div>
+  );
+}
+
 export function Section1() {
   return (
-    <>
+    <div className={s1.sectionClass}>
       <Social />
-    </>
+      <Content />
+    </div>
   );
 }

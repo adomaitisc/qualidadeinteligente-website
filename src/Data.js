@@ -4,10 +4,6 @@ import ig from "./assets/Instagram.svg";
 import li from "./assets/LinkedIn.svg";
 
 export const header = {
-  logo: {
-    source: logo,
-    alt: "Qualidade Inteligente",
-  },
   items: {
     item1: "Soluções",
     item2: "Quem Somos",
@@ -19,18 +15,12 @@ export const section_01 = {
   social: {
     facebook: {
       href: "https://www.facebook.com/qualidadeinteligente",
-      source: fb,
-      alt: "Facebook",
     },
     instagram: {
       href: "https://www.instagram.com/qualidadeinteligente",
-      source: ig,
-      alt: "Instagram",
     },
     linkedin: {
       href: "https://www.linkedin.com/in/qualidadeinteligente",
-      source: li,
-      alt: "LinkedIn",
     },
   },
   content: {

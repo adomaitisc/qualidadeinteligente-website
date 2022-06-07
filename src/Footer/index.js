@@ -4,7 +4,7 @@ import { footer } from "../Data";
 
 function Stamp() {
   return (
-    <div className={footer.container1.containerClass}>
+    <div className="">
       <img
         src={footer.container1.logo.source}
         alt={footer.container1.logo.alt}
@@ -26,7 +26,7 @@ function mapSocial(object) {
 
 function Social() {
   return (
-    <div className={footer.container2.containerClass}>
+    <div className="">
       <p>Acompanhe-nos nas Redes Sociais</p>
       <ul>{mapSocial(footer.container2.social)}</ul>
     </div>
@@ -35,21 +35,19 @@ function Social() {
 
 function Explore() {
   return (
-    <div className="container3">
+    <div className="">
       <h6>{footer.container3.title}</h6>
       {footer.container3.explore.map((item, index) => (
         <p key={index}>{item}</p>
       ))}
-      <p className={footer.container3.ctaClass}>
-        {footer.container3.containerClass.cta}
-      </p>
+      <p className="">{footer.container3.cta}</p>
     </div>
   );
 }
 
 function Solutions() {
   return (
-    <div className={footer.container4.containerClass}>
+    <div className="">
       <h6>{footer.container4.title}</h6>
       {footer.container4.solution.map((item, index) => (
         <p key={index}>{item}</p>
@@ -60,7 +58,7 @@ function Solutions() {
 
 export default function index() {
   return (
-    <div className="footer">
+    <div className="">
       <Stamp />
       <Social />
       <Explore />

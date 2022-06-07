@@ -12,10 +12,10 @@ function Text() {
 
 function mapInputs(object) {
   return Object.keys(object).map((key, index) => (
-    <>
+    <div key={index}>
       <label htmlFor={object[key].id}>{object[key].label}</label>
       <input type={object[key].type} id={object[key].id} />
-    </>
+    </div>
   ));
 }
 

@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap");
-
 .section {
   align-self: center;
   width: 1336px;
   height: 1080px;
-  background-color: #0e0e0e;
   display: flex;
   flex-direction: row;
   align-items: center;

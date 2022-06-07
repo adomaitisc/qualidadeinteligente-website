@@ -1,6 +1,6 @@
 import React from "react";
 
-import { section_01 as s1 } from "../../Data";
+import { section_01 as s1 } from "../../../Data";
 
 function mapSocial(object) {
   return Object.keys(object).map((key, index) => (
@@ -13,21 +13,21 @@ function mapSocial(object) {
 }
 
 function Social() {
-  return <ul className={s1.socialClass}>{mapSocial(s1.social)}</ul>;
+  return <ul className="">{mapSocial(s1.social)}</ul>;
 }
 
 function Text() {
   return (
-    <div className={s1.contentClass}>
+    <div className="">
       <h1>{s1.content.title}</h1>
       <p>{s1.content.description}</p>
     </div>
   );
 }
 
-export function Landing() {
+export default function Landing() {
   return (
-    <div className={s1.sectionClass}>
+    <div className="">
       <Social />
       <Text />
     </div>

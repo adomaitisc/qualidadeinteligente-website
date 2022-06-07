@@ -4,9 +4,6 @@ import ig from "./assets/Instagram.svg";
 import li from "./assets/LinkedIn.svg";
 
 export const header = {
-  headerClass: "header",
-  listClass: "list",
-  listItemClass: "list_item",
   logo: {
     source: logo,
     alt: "Qualidade Inteligente",
@@ -19,9 +16,6 @@ export const header = {
 };
 
 export const section_01 = {
-  sectionClass: "s1",
-  socialClass: "s1_social",
-  contentClass: "s1_content",
   social: {
     facebook: {
       href: "https://www.facebook.com/qualidadeinteligente",
@@ -96,10 +90,6 @@ export const section_02 = {
 };
 
 export const section_03 = {
-  sectionClass: "s3",
-  contentClass: "s3_content",
-  infoClass: "s3_info",
-  infoItemClass: "s3_info_item",
   content: {
     subTitle: "Um pouco sobre a",
     title: "Qualidade Inteligente",
@@ -127,10 +117,6 @@ export const section_03 = {
 };
 
 export const section_04 = {
-  sectionClass: "s4",
-  contentClass: "s4_content",
-  testimonialsClass: "s4_testimonials",
-  testimonialsItemClass: "s4_testimonials_item",
   content: {
     title: "Algumas palavras sobre nós",
   },
@@ -186,10 +172,6 @@ export const section_04 = {
 };
 
 export const section_05 = {
-  sectionClass: "s5",
-  contentClass: "s5_content",
-  formClass: "s5_form",
-  formItemClass: "s5_form_item",
   content: {
     title: "Fale com a gente!",
     description:
@@ -249,7 +231,6 @@ export const section_05 = {
 
 export const footer = {
   container1: {
-    containerClass: "c1",
     title: "Compromisso com a sua Certificação.",
     logo: {
       source: logo,
@@ -257,7 +238,6 @@ export const footer = {
     },
   },
   container2: {
-    containerClass: "c2",
     title: "Acompanhe-nos nas Redes Sociais",
     social: {
       facebook: {
@@ -278,14 +258,11 @@ export const footer = {
     },
   },
   container3: {
-    containerClass: "c3",
-    ctaClass: "c3_cta",
     title: "Explorar",
     explore: ["Home", "Soluções", "Sobre Nós", "Recomendações"],
     cta: "Contate a QI → ",
   },
   container4: {
-    containerClass: "c4",
     title: "Soluções",
     solution: [
       "Auditorias Internas",

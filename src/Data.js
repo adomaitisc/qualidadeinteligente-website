@@ -47,14 +47,12 @@ export const section_01 = {
 };
 
 export const section_02 = {
-  sectionClass: "s2",
-  cardsClass: "s2_cards",
-  cardsItemClass: "s2_cards_item",
-  contentClass: "s2_content",
   content: {
     title: "Nossas Soluções.",
-    description:
-      "Preparamos uma Consultoria Personalizada, adaptada a gestão da sua empresa. Elaboramos a documentação necessária para atender aos requisitos das normas usando uma estrutura simplificada e desburocratizada.",
+    description: {
+      d1: "Preparamos uma Consultoria Personalizada, adaptada a gestão da sua empresa.",
+      d2: "Elaboramos a documentação necessária para atender aos requisitos das normas usando uma estrutura simplificada e desburocratizada.",
+    },
     button: "Contate nossa Equipe → ",
   },
   cards: {
@@ -62,13 +60,19 @@ export const section_02 = {
     col1: {
       c1: {
         title: "Auditorias Internas.",
-        description:
-          "Requisito obrigatório em todas as normas referenciadas. - PBQP-H        - ISO 9001\n- ISO 14001    - ISO 45001",
+        description: {
+          d1: "Requisito obrigatório em todas as normas referenciadas.",
+          d2: "- PBQP-H        - ISO 9001",
+          d3: "- ISO 14001    - ISO 45001",
+        },
       },
       c2: {
         title: "PBQP-H e a NBR 15.575",
-        description:
-          "PBQP-H – Plano Brasileiro de Qualidade e Produtividade no Habitat.\nNBR 15.575 - Norma de Desempenho Habitacional.",
+        description: {
+          d1: "PBQP-H – Plano Brasileiro de Qualidade e Produtividade no Habitat.",
+          d2: "NBR 15.575 - Norma de Desempenho Habitacional.",
+          d3: "",
+        },
       },
     },
     col2: {

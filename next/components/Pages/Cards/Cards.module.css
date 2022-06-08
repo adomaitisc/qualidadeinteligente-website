@@ -1,0 +1,120 @@
+.section {
+  align-self: center;
+  width: 1336px;
+  height: 1080px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  text-align: left;
+}
+
+.text h1 {
+  color: #f8f8f8;
+  max-width: 282px;
+  line-height: 4rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 0px;
+  margin-bottom: 2rem;
+}
+
+.text p {
+  color: #c2c2c2;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  max-width: 511px;
+  margin: 0px;
+  margin-bottom: 2rem;
+}
+
+.text button {
+  color: #000000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  height: 80px;
+  width: 293px;
+  background-color: #ffffff;
+  padding: auto;
+  border-radius: 15px;
+  border: none;
+  margin: 0px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.firstWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.firstWrapper ul {
+  margin: 0px;
+}
+
+.firstWrapper ul li {
+  height: 250px;
+}
+.firstWrapper button {
+  color: #f8f8f8;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  align-self: right;
+}
+
+.secondWrapper {
+  margin-left: 2rem;
+}
+
+.secondWrapper ul li {
+  height: 190px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 0px;
+}
+
+.list li {
+  width: 350px;
+  list-style: none;
+  background-color: #131313;
+  border-radius: 15px;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.list li h6 {
+  color: #d4d4d4;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  max-width: 190px;
+  padding: 1rem 1.5rem 1rem;
+  margin: 0px;
+}
+
+.list li p {
+  color: #a6a6a6;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0px 1.5rem;
+}

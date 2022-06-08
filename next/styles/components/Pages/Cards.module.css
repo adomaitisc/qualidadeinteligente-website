@@ -28,7 +28,7 @@
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
-  max-width: 511px;
+  max-width: 500px;
   margin: 0px;
   margin-bottom: 2rem;
 }
@@ -65,11 +65,12 @@
 .firstWrapper ul li {
   height: 250px;
 }
+
 .firstWrapper button {
   color: #f8f8f8;
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 500;
   background-color: transparent;
   border: none;
   align-self: right;
@@ -106,7 +107,7 @@
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  max-width: 190px;
+  max-width: 250px;
   padding: 1rem 1.5rem 1rem;
   margin: 0px;
 }

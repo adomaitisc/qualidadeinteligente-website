@@ -78,8 +78,10 @@ export const section_03 = {
   content: {
     subTitle: "Um pouco sobre a",
     title: "Qualidade Inteligente",
-    description:
-      "Somos uma empresa com uma metodologia diferenciada, proporcionando Sistemas de Gestão completamente adaptados aos seus clientes. Reduzimos consideravelmente os prazos de implantação para as certificações, tornando esse processo bem simplificado.",
+    description: {
+      d1: "Somos uma empresa com uma metodologia diferenciada, proporcionando Sistemas de Gestão completamente adaptados aos seus clientes.",
+      d2: "Reduzimos consideravelmente os prazos de implantação para as certificações, tornando esse processo bem simplificado.",
+    },
     button: "Solicite uma Proposta →",
   },
   info: {

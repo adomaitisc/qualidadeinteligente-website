@@ -3,7 +3,7 @@ import Facebook from "../../../assets/Facebook";
 import Instagram from "../../../assets/Instagram";
 import LinkedIn from "../../../assets/LinkeDin";
 
-import styles from "./Landing.module.css";
+import styles from "../../../styles/components/pages/Landing.module.css";
 
 function Social() {
   return (

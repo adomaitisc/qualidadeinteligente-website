@@ -1,5 +1,5 @@
 import { section_02 as s2 } from "../../../Data";
-import styles from "./Cards.module.css";
+import styles from "../../../styles/components/pages/Cards.module.css";
 
 function Text() {
   return (
@@ -7,6 +7,7 @@ function Text() {
       <h1>{s2.content.title}</h1>
       <p>
         {s2.content.description.d1}
+        <br />
         <br />
         {s2.content.description.d2}
       </p>

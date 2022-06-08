@@ -19,6 +19,7 @@ function Qualidade(props) {
         fill="#DCDCDC"
       />
       <path d="M41.4 20.5h4.27l-1.897 3.417h-4.27L41.4 20.5z" fill="#2192E4" />
+      <title>Qualidade Inteligente Logo</title>
     </svg>
   );
 }

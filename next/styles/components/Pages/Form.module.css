@@ -1,0 +1,95 @@
+.section {
+  align-self: center;
+  width: 1336px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.text h2 {
+  color: #f8f8f8;
+  line-height: 4rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 4rem;
+  margin: 0px;
+  margin-bottom: 1rem;
+}
+
+.text p {
+  color: #c2c2c2;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin: 0px;
+  margin-bottom: 0.25rem;
+}
+
+.text button {
+  cursor: pointer;
+  color: #3474ff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  background-color: transparent;
+  border: none;
+  margin: 0px;
+  padding: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.content div {
+  display: block;
+  margin: 30px 10px;
+  position: relative;
+  outline: none;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.content div[id="0"] {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.content div[id="1"] {
+  grid-area: 1 / 3 / 2 / 5;
+}
+
+.content div[id="2"] {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.content div[id="3"] {
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+.content div[id="4"] {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.content div[id="5"] {
+  grid-area: 3 / 3 / 4 / 5;
+}
+
+.message {
+  grid-area: 4 / 1 / 5 / 4;
+}
+
+.content button {
+  grid-area: 4 / 4 / 5 / 5;
+}

@@ -1,7 +1,7 @@
 import Landing from "./Landing";
 import Cards from "./Cards";
 import Info from "./Info";
-// import Testimonials from "./Sections/Testimonials";
+import Testimonials from "./Testimonials";
 // import Form from "./Sections/Form";
 
 import styles from "../../styles/components/Pages.module.css";
@@ -12,7 +12,7 @@ export default function Pages() {
       <Landing />
       <Cards />
       <Info />
-      {/* <Testimonials /> */}
+      <Testimonials />
       {/* <Form /> */}
     </div>
   );

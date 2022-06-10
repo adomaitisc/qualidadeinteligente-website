@@ -1,0 +1,54 @@
+.header {
+  height: 106px;
+  width: 100%;
+  justify-self: center;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+}
+
+.icon {
+  margin-left: 8rem;
+  width: 46px;
+  height: 41px;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.header div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  width: 400px;
+  padding: 0;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+
+.item {
+  color: #dcdcdc;
+  list-style: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: 0.3s;
+}
+
+.item:hover {
+  color: #3474ff;
+  cursor: pointer;
+  transition: 0.3s;
+}

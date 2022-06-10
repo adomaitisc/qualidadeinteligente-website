@@ -55,7 +55,7 @@
 
 .list li {
   width: 400px;
-  height: 200px;
+  height: 220px;
   background-color: #131313;
   list-style: none;
   margin: 0px;
@@ -67,7 +67,7 @@
 .list li h6 {
   color: #f8f8f8;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   margin: 1rem 1rem 0px;
   padding: 0;

@@ -28,7 +28,9 @@ function Content() {
         <label htmlFor={s5.form.message.id}>{s5.form.message.label}</label>
         <input type={s5.form.message.type} id={s5.form.message.id} />
       </div>
-      <button type="submit">{s5.form.button}</button>
+      <div className={styles.button}>
+        <button type="submit">{s5.form.button}</button>
+      </div>
     </form>
   );
 }

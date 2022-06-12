@@ -11,7 +11,7 @@ function Text() {
 
 function mapTestimonials(object) {
   return Object.keys(object).map((key, index) => (
-    <li key={index}>
+    <li key={index} className={index === 0 ? styles.li0 : ""}>
       <h6>{object[key].author}</h6>
       <p id="role">{object[key].role}</p>
       <p>{object[key].description}</p>
@@ -31,7 +31,7 @@ function Content() {
       <div>
         <ul className={styles.list}>{mapTestimonials(s4.col2)}</ul>
       </div>
-      <div>
+      <div className={styles.last}>
         <ul className={styles.list}>{mapTestimonials(s4.col3)}</ul>
       </div>
     </div>
@@ -40,9 +40,9 @@ function Content() {
 
 export default function Testimonials() {
   return (
-    <div className={styles.section}>
+    <section className={styles.section}>
       <Text />
       <Content />
-    </div>
+    </section>
   );
 }

@@ -37,9 +37,9 @@ function Content() {
 
 export default function Form() {
   return (
-    <div className={styles.section}>
+    <section className={styles.section}>
       <Text />
       <Content />
-    </div>
+    </section>
   );
 }

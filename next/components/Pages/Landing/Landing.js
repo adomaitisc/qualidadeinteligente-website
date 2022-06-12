@@ -38,9 +38,9 @@ function Text() {
 
 export default function Landing() {
   return (
-    <div className={styles.section}>
+    <section className={styles.section}>
       <Social />
       <Text />
-    </div>
+    </section>
   );
 }

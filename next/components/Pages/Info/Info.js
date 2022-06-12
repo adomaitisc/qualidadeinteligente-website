@@ -39,9 +39,9 @@ function Content() {
 
 export default function Info() {
   return (
-    <div className={styles.section}>
+    <section className={styles.section}>
       <Text />
       <Content />
-    </div>
+    </section>
   );
 }

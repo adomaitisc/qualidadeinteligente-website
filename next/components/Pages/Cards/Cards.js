@@ -57,10 +57,10 @@ function Content() {
 
 function Cards() {
   return (
-    <div className={styles.section}>
+    <section className={styles.section}>
       <Text />
       <Content />
-    </div>
+    </section>
   );
 }
 

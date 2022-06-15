@@ -33,20 +33,6 @@
   margin-bottom: 2rem;
 }
 
-.text button {
-  color: #000000;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  height: 80px;
-  width: 293px;
-  background-color: #ffffff;
-  padding: auto;
-  border-radius: 15px;
-  border: none;
-  margin: 0px;
-}
-
 .content {
   display: flex;
   flex-direction: row;
@@ -64,16 +50,6 @@
 
 .firstWrapper ul li {
   height: 250px;
-}
-
-.firstWrapper button {
-  color: #f8f8f8;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  align-self: right;
 }
 
 .secondWrapper {

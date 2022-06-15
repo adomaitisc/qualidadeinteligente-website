@@ -1,5 +1,7 @@
 import styles from "../../styles/components/Data.module.css";
 
+import Button from "../Button";
+
 const data = [
   ["Garantia", "100%", "de Resultados Garantidos"],
   ["Conclusão", "+80", "Certificações Completas"],
@@ -38,7 +40,7 @@ function Text() {
           Reduzimos consideravelmente os prazos de implantação para as
           certificações, tornando esse processo bem simplificado.
         </p>
-        <button>Solicite uma Proposta → </button>
+        <Button type="button" text="Solicite uma Proposta → " />
       </div>
     </div>
   );

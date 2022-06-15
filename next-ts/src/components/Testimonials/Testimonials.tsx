@@ -1,5 +1,7 @@
 import styles from "../../styles/components/Testimonials.module.css";
 
+import Button from "../Button";
+
 const testimonials = {
   col1: [
     [
@@ -60,7 +62,7 @@ function Content() {
       <div className={styles.wrapper}>
         <ul className={styles.list}>{mapTestimonials(testimonials.col1)}</ul>
         <div className={styles.buttonArea}>
-          <button>Faça parte do nosso sucesso →</button>
+          <Button type="button" text="Faça parte do nosso sucesso →" />
         </div>
       </div>
       <div>

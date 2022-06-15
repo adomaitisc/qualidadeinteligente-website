@@ -1,5 +1,7 @@
 import styles from "../../styles/components/Contact.module.css";
 
+import Button from "../Button";
+
 function Text() {
   return (
     <div className={styles.text}>
@@ -57,6 +59,9 @@ function mapSelectInputs(array: any) {
     <div key={index} id={`s${index}`}>
       <label htmlFor={item[1]}>{item[0]}</label>
       <select name={item[1]}>
+        <option value="" selected disabled hidden>
+          Selecione →
+        </option>
         {item[3].map((option: any, index: number) => (
           <option key={index} value={option}>
             {option}
@@ -74,10 +79,15 @@ function Content() {
       {mapSelectInputs(inputs.select)}
       <div className={styles.message}>
         <label htmlFor={inputs.message[1]}>{inputs.message[0]}</label>
-        <input type={inputs.message[2]} id={inputs.message[1]} />
+        <textarea name={inputs.message[1]} id={inputs.message[1]} />
       </div>
       <div className={styles.button}>
-        <button type="submit">Enviar Mensagem → </button>
+        <Button
+          primary
+          type="submit"
+          onClick={() => console.log("submit")}
+          text="Enviar Mensagem → "
+        />
       </div>
     </form>
   );

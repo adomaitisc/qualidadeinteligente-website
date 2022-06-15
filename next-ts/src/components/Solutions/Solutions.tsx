@@ -1,5 +1,7 @@
 import styles from "../../styles/components/Solutions.module.css";
 
+import Button from "../Button";
+
 const solutions = {
   col1: [
     [
@@ -61,7 +63,7 @@ function Content() {
     <div className={styles.content}>
       <div className={styles.firstWrapper}>
         <ul className={styles.list}>{mapFirstCol(solutions.col1)}</ul>
-        <button>Explorar Certificações → </button>
+        <Button type="button" text="Explorar Certificações →" />
       </div>
       <div className={styles.secondWrapper}>
         <ul className={styles.list}>{mapSecondCol(solutions.col2)}</ul>
@@ -82,7 +84,7 @@ function Text() {
         Elaboramos a documentação necessária para atender aos requisitos das
         normas usando uma estrutura simplificada e desburocratizada.
       </p>
-      <button>Contate nossa Equipe → </button>
+      <Button primary type="button" text="Contate nossa Equipe →" />
     </div>
   );
 }

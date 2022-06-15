@@ -1,0 +1,35 @@
+.button {
+  height: 60px;
+  color: #000000;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 15px;
+  border: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transition: 0.3s;
+  background-color: #5d84f8;
+  cursor: pointer;
+}
+
+.link {
+  color: #f8f8f8;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  align-self: right;
+  transition: 0.3s;
+}
+
+.link:hover {
+  transition: 0.3s;
+  color: #5d84f8;
+  cursor: pointer;
+}

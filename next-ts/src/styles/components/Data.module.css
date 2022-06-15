@@ -49,17 +49,6 @@
   margin-bottom: 2rem;
 }
 
-.text div button {
-  color: #f8f8f8;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
-  background-color: transparent;
-  border: none;
-  align-self: right;
-  margin-right: 1rem;
-}
-
 .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

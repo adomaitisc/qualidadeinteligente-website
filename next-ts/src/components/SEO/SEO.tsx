@@ -10,45 +10,37 @@ const metaTags = [
     name: "keywords",
     content:
       "ISO 9001, ISO 45001, ISO 14001, Segurança do Trabalho, Qualidade, Certificação, Auditorias, PBQP-H, NBR 15.575, Normas Ambientais",
-    key: "keywords",
   },
   {
     name: "description",
     content: description,
-    key: "description",
   },
-  { name: "twitter:card", content: "summary", key: "twitterCard" },
+  { name: "twitter:card", content: "summary" },
   {
     property: "twitter:title",
     content: title,
-    key: "twitterTitle",
   },
   {
     name: "twitter:image",
     content: image,
-    key: "twitterImage",
   },
   {
     property: "twitter:description",
     content: description,
-    key: "twitterDescription",
   },
   {
     property: "og:title",
     content: "Qualidade Inteligente | Compromisso com a sua Certificação!",
-    key: "ogTitle",
   },
-  { property: "og:description", content: description, key: "ogDescription" },
-  { property: "og:type", content: "website", key: "ogType" },
+  { property: "og:description", content: description },
+  { property: "og:type", content: "website" },
   {
     property: "og:url",
     content: "https://qualidadeinteligente-website.vercel.app",
-    key: "ogUrl",
   },
   {
     property: "og:image",
     content: image,
-    key: "ogImage",
   },
 ];
 
@@ -58,7 +50,7 @@ export default function SEO() {
       <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
       {metaTags.map((tag) => (
-        <meta {...tag} />
+        <meta key={`${tag.name || tag.property}Key`} {...tag} />
       ))}
     </Head>
   );

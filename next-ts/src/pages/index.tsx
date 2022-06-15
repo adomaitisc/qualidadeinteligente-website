@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 
 //Importing components
 import Header from "../components/Header";
+import Landing from "../components/Landing";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+      <Landing />
     </div>
   );
 };

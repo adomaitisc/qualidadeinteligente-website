@@ -1,6 +1,6 @@
 import styles from "../../styles/components/Solutions.module.css";
 
-const cards = {
+const solutions = {
   col1: [
     [
       "Auditorias Internas",
@@ -60,11 +60,11 @@ function Content() {
   return (
     <div className={styles.content}>
       <div className={styles.firstWrapper}>
-        <ul className={styles.list}>{mapFirstCol(cards.col1)}</ul>
+        <ul className={styles.list}>{mapFirstCol(solutions.col1)}</ul>
         <button>Explorar Certificações → </button>
       </div>
       <div className={styles.secondWrapper}>
-        <ul className={styles.list}>{mapSecondCol(cards.col2)}</ul>
+        <ul className={styles.list}>{mapSecondCol(solutions.col2)}</ul>
       </div>
     </div>
   );
@@ -87,7 +87,7 @@ function Text() {
   );
 }
 
-function Cards() {
+function Solutions() {
   return (
     <section className={styles.section}>
       <Text />
@@ -96,4 +96,4 @@ function Cards() {
   );
 }
 
-export default Cards;
+export default Solutions;

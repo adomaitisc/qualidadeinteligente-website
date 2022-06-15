@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Solutions from "../components/Solutions";
+import Data from "../components/Data";
 
 const Home: NextPage = () => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = () => {
       <Header />
       <Landing />
       <Solutions />
+      <Data />
     </div>
   );
 };

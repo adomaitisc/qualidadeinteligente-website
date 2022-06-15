@@ -7,6 +7,7 @@ import Landing from "../components/Landing";
 import Solutions from "../components/Solutions";
 import Data from "../components/Data";
 import Testimonials from "../components/Testimonials";
+import Contact from "../components/Contact";
 
 import styles from "../styles/Home.module.css";
 
@@ -21,6 +22,7 @@ const Home: NextPage = () => {
         <Solutions />
         <Data />
         <Testimonials />
+        <Contact />
       </div>
     </div>
   );

@@ -26,6 +26,7 @@ const metaTags = [
   {
     name: "twitter:image",
     content: image,
+    key: "twitterImage",
   },
   {
     property: "twitter:description",

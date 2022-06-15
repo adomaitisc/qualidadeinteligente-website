@@ -58,7 +58,7 @@ export default function SEO() {
       <title>{title}</title>
       <link rel="icon" href="/favicon.ico" />
       {metaTags.map((tag) => (
-        <meta key={tag.key} {...tag} />
+        <meta {...tag} />
       ))}
     </Head>
   );

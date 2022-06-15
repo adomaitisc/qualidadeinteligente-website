@@ -1,5 +1,5 @@
 import { section_02 as s2 } from "../../../Data";
-import styles from "../../../styles/components/pages/Cards.module.css";
+import styles from "../../../styles/components/Cards.module.css";
 
 function Text() {
   return (

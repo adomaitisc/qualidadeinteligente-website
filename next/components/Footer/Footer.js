@@ -1,5 +1,6 @@
 import { footer } from "../../Data";
 import Qualidade from "../../assets/Qualidade";
+import { Image } from "next/image";
 import styles from "../../styles/components/Footer.module.css";
 
 function Stamp() {
@@ -15,7 +16,7 @@ function mapSocial(object) {
   return Object.keys(object).map((key, index) => (
     <li key={key}>
       <a href={object[key].href} target="_blank" rel="noreferrer">
-        <img src={object[key].source} alt={object[key].alt} />
+        <Image src={object[key].source} alt={object[key].alt} />
       </a>
     </li>
   ));

@@ -1,5 +1,5 @@
 import { section_04 as s4 } from "../../../Data";
-import styles from "../../../styles/components/pages/Testimonials.module.css";
+import styles from "../../../styles/components/Testimonials.module.css";
 
 function Text() {
   return (

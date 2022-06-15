@@ -1,9 +1,9 @@
 import { section_01 as s1 } from "../../../Data";
 import Facebook from "../../../assets/Facebook";
 import Instagram from "../../../assets/Instagram";
-import LinkedIn from "../../../assets/LinkeDin";
+import LinkedIn from "../../../assets/LinkedIn";
 
-import styles from "../../../styles/components/pages/Landing.module.css";
+import styles from "../../../styles/components/Landing.module.css";
 
 function Social() {
   return (

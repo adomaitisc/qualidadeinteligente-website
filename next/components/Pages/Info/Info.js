@@ -1,5 +1,5 @@
 import { section_03 as s3 } from "../../../Data";
-import styles from "../../../styles/components/pages/Info.module.css";
+import styles from "../../../styles/components/Info.module.css";
 
 function Text() {
   return (

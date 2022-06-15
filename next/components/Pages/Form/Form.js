@@ -1,5 +1,5 @@
 import { section_05 as s5 } from "../../../Data";
-import styles from "../../../styles/components/pages/Form.module.css";
+import styles from "../../../styles/components/Form.module.css";
 
 function Text() {
   return (

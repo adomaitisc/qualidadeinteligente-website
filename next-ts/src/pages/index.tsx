@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Landing from "../components/Landing";
 import Solutions from "../components/Solutions";
 import Data from "../components/Data";
+import Testimonials from "../components/Testimonials";
 
 import styles from "../styles/Home.module.css";
 
@@ -15,9 +16,12 @@ const Home: NextPage = () => {
       <SEO />
 
       <Header />
-      <Landing />
-      <Solutions />
-      <Data />
+      <div className={styles.pages}>
+        <Landing />
+        <Solutions />
+        <Data />
+        <Testimonials />
+      </div>
     </div>
   );
 };

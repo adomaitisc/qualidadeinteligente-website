@@ -1,11 +1,10 @@
-// import { header } from "../../Data";
-// import Qualidade from "../../assets/Qualidade";
+import Qualidade from "../Assets/Qualidade";
 import styles from "../../styles/components/Header.module.css";
 
 export default function Header() {
   return (
     <div className={styles.header}>
-      {/* <Qualidade className={styles.icon} /> */}
+      <Qualidade className={styles.icon} />
       <div>
         <ul className={styles.list}>
           <li className={styles.item}>Soluções</li>

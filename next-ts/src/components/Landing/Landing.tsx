@@ -1,6 +1,6 @@
-// import Facebook from "../../../assets/Facebook";
-// import Instagram from "../../../assets/Instagram";
-// import LinkedIn from "../../../assets/LinkedIn";
+import Facebook from "../Assets/Facebook";
+import Instagram from "../Assets/Instagram";
+import LinkedIn from "../Assets/LinkedIn";
 
 import styles from "../../styles/components/Landing.module.css";
 
@@ -15,17 +15,17 @@ function Social() {
     <ul className={styles.social}>
       <li>
         <a href={socialUrl.fb} target="_blank" rel="noreferrer">
-          {/* <Facebook className={styles.icon} /> */}
+          <Facebook className={styles.icon} />
         </a>
       </li>
       <li>
         <a href={socialUrl.ig} target="_blank" rel="noreferrer">
-          {/* <Instagram className={styles.icon} /> */}
+          <Instagram className={styles.icon} />
         </a>
       </li>
       <li>
         <a href={socialUrl.li} target="_blank" rel="noreferrer">
-          {/* <LinkedIn className={styles.icon} /> */}
+          <LinkedIn className={styles.icon} />
         </a>
       </li>
     </ul>

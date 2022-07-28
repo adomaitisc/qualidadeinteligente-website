@@ -16,7 +16,7 @@ function mapSocial(object) {
   return Object.keys(object).map((key, index) => (
     <li key={key}>
       <a href={object[key].href} target="_blank" rel="noreferrer">
-        <Image src={object[key].source} alt={object[key].alt} />
+        {/* <Image src={object[key].source} alt={object[key].alt} /> */}
       </a>
     </li>
   ));

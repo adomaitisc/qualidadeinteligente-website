@@ -5,11 +5,13 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to Astro.">
 	<main class="max-w-7xl mx-auto text-white">
-		<div class="mt-10 relative w-full overflow-hidden h-[80vh]">
+		<!-- Hero -->
+		<div class="mt-24 relative w-full overflow-hidden h-[80vh] rounded-[3rem] border border-zinc-800">
 			<div class="absolute w-full h-full items-center grid grid-cols-4 gap-4 px-20">
 				<div class="col-span-2">
 					<h1 class="text-6xl font-semibold">Simplifique a Gestão da sua Qualidade</h1>
-					<p class="text-lg text-zinc-400 mt-4">Provemos soluções customizadas para melhorar a qualidade e agilizar o processo de certificação da sua empresa.</p>
+					<p class="text-xl text-zinc-400 mt-4">Provemos soluções customizadas para melhorar a qualidade e agilizar o processo de certificação da sua empresa.</p>
+					<button class="group flex gap-2 items-center mt-8 px-6 py-3 bg-black/60 rounded-xl text-white hover:border-purple-300 w-[204.38px] hover:w-[228.38px] whitespace-nowrap duration-300 border border-zinc-800">Veja nossas soluções <svg class="w-4 h-4 hidden group-hover:block duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-corner-right-down"><polyline points="10 15 15 20 20 15"/><path d="M4 4h7a4 4 0 0 1 4 4v12"/></svg></button>
 				</div>
 				<div class="col-span-2">
 					<img class="mx-auto" src="/assets/orbit.svg" alt="Hero Image" />
@@ -17,9 +19,28 @@ import Card from '../components/Card.astro';
 			</div>
 			<img class="w-full h-full" src="/assets/background.png" alt="Background Image" />
 		</div>
+		<!-- Clientes -->
+		<div class="w-full mt-12">
+			<img src="/assets/testimonials.png" alt="clientes" class="mx-auto" />
 		</div>
-		<div class="grid grid-cols-3">
-			<Card href="/" title="Aditis Controle Tecnológico" body="Plataforma específica para controle tecnológico de estruturas, fundações, pavimentação e agregados." />
+		<!-- Soluções -->
+		<div class="w-full grid grid-cols-7 mt-24 gap-6 px-24">
+			<h1 class="col-span-7 text-xl font-semibold flex items-center gap-2">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-maximize"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
+				Soluções
+			</h1>
+			<div class="col-span-4">
+				<Card href="/" external title="Aditis - Controle Tecnológico" body="Plataforma específica para controle tecnológico de estruturas, fundações, pavimentação e agregados." />
+			</div>
+			<div class="col-span-3">
+				<Card href="/" title="NBR 15.575" body="Um conjunto normativo que visa melhorar a qualidade de habitações, estabelecendo parâmetros e abrangendo toda a cadeia produtiva." />
+			</div>
+			<div class="col-span-3">
+				<Card href="/" title="PBQP-H" body="Programa governamental cujo objetivo é promover a qualidade e a produtividade na construção civil." />
+			</div>
+			<div class="col-span-3">
+				<Card href="/" title="ISO-9001" body="Norma internacional que estabelece requisitos para sistemas de gestão de qualidade." />
+			</div>
 		</div>
 	</main>
 </Layout>

@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="max-w-7xl mx-auto text-white">
+		<div class="mt-10 relative w-full overflow-hidden h-[80vh]">
+			<div class="absolute w-full h-full items-center grid grid-cols-4 gap-4 px-20">
+				<div class="col-span-2">
+					<h1 class="text-6xl font-semibold">Simplifique a Gestão da sua Qualidade</h1>
+					<p class="text-lg text-zinc-400 mt-4">Provemos soluções customizadas para melhorar a qualidade e agilizar o processo de certificação da sua empresa.</p>
+				</div>
+				<div class="col-span-2">
+					<img class="mx-auto" src="/assets/orbit.svg" alt="Hero Image" />
+				</div>
+			</div>
+			<img class="w-full h-full" src="/assets/background.png" alt="Background Image" />
+		</div>
+		</div>
+		<div class="grid grid-cols-3">
+			<Card href="/" title="Aditis Controle Tecnológico" body="Plataforma específica para controle tecnológico de estruturas, fundações, pavimentação e agregados." />
+		</div>
+	</main>
+</Layout>

@@ -1,0 +1,36 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="mx-auto max-w-7xl grid place-items-center text-white mt-6">
+			<div class="flex border border-zinc-800 p-1 rounded-xl items-center">
+				<img src="/assets/qi-app.png" class="w-10 h-10" alt="QI" />
+				<span class="px-6">Início</span>
+				<span class="px-6">Soluções</span>
+				<span class="px-6">Sobre nós</span>
+			</div>
+		</div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #000000;
+	}
+</style>

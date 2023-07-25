@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 400;
+  src: url("/fonts/borna-regular-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/fonts/borna-regularitalic-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 500;
+  src: url("/fonts/borna-medium-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 500;
+  font-style: italic;
+  src: url("/fonts/borna-mediumitalic-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 600;
+  src: url("/fonts/borna-semibold-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 600;
+  font-style: italic;
+  src: url("/fonts/borna-semibolditalic-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 700;
+  src: url("/fonts/borna-bold-webfont.woff");
+}
+
+@font-face {
+  font-family: "Borna";
+  font-weight: 700;
+  font-style: italic;
+  src: url("/fonts/borna-bolditalic-webfont.woff");
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}

@@ -1,13 +1,19 @@
 import Image from "next/image";
 import { Card } from "./card";
-import { CornerRightDown, Maximize } from "lucide-react";
+import {
+  CornerRightDown,
+  Expand,
+  ExternalLink,
+  Maximize,
+  ZoomIn,
+} from "lucide-react";
 import { Balancer } from "react-wrap-balancer";
 
 export default function Home() {
   return (
     <main className="p-4 pb-48 text-white">
       {/* Hero */}
-      <div className="relative mx-auto mt-24 h-[65vh] max-w-7xl overflow-hidden rounded-3xl">
+      <div className="relative mx-auto mt-24 h-[700px] max-w-7xl overflow-hidden rounded-3xl">
         <div className="absolute z-10 flex h-full w-full items-center gap-8 p-16">
           {/* Text */}
           <div className="w-full">
@@ -20,11 +26,11 @@ export default function Home() {
                 agilizar o processo de certificação da sua empresa.
               </Balancer>
             </p>
-            {/* <button className="group mt-8 flex w-[204.38px] items-center gap-2 whitespace-nowrap rounded-xlborder-2 border-zinc-600 bg-black/60 px-6 py-3 text-white duration-300 hover:w-[236.38px] hover:border-purple-300">
+            <button className="group mt-8 flex items-center gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-zinc-200 px-6 py-3 font-borna font-medium text-black duration-200 hover:opacity-80">
               Veja nossas soluções <CornerRightDown className="h-4 w-4" />
-            </button> */}
+            </button>
           </div>
-          {/* Image */}
+          {/* Hero Image */}
           <div className="flex h-full w-full max-w-sm items-center justify-end">
             <div className="relative aspect-square w-full max-w-xs">
               <Image
@@ -36,17 +42,18 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/* Background Image */}
         <Image
           alt="bg"
-          src="/assets/background.svg"
+          src="/assets/gradient.svg"
           fill
           className="object-cover"
         />
       </div>
-      {/* Clientes */}
+      {/* Clients */}
       <div className="mt-16 flex w-full flex-col items-center">
         <p className="mb-2 font-borna text-zinc-500">
-          Clientes certificados e satisfeitos
+          Atuando nas melhores construtoras
         </p>
         <Image
           width={800}
@@ -57,45 +64,111 @@ export default function Home() {
         />
       </div>
 
-      {/* Soluções */}
-      <div className="mx-auto mt-32 grid w-full max-w-6xl grid-cols-7 gap-6">
-        <h1 className="col-span-7 flex items-center gap-2 font-borna text-2xl text-zinc-500">
+      {/* Services */}
+      <div className="mx-auto mt-72 flex max-w-6xl flex-col items-center">
+        {/* Title */}
+        <h2 className="col-span- flex items-center gap-2 font-borna text-xl font-medium text-zinc-500">
           <Maximize size={20} />
-          Nossas soluções
-        </h1>
-        <div className="col-span-4">
-          <Card
-            href="/"
-            external
-            title="Aditis - Controle Tecnológico"
-            body="Plataforma específica para controle tecnológico de estruturas, fundações, pavimentação e agregados."
-          />
-        </div>
-        <div className="col-span-3">
-          <Card
-            href="/"
-            title="NBR 15.575"
-            body="Um conjunto normativo que visa melhorar a qualidade de habitações, estabelecendo parâmetros e abrangendo toda a cadeia produtiva."
-          />
-        </div>
-        <div className="col-span-3">
-          <Card
-            href="/"
-            title="PBQP-H"
-            body="Programa governamental cujo objetivo é promover a qualidade e a produtividade na construção civil."
-          />
-        </div>
-        <div className="col-span-3">
-          <Card
-            href="/"
-            title="ISO-9001"
-            body="Norma internacional que estabelece requisitos para sistemas de gestão de qualidade."
-          />
+          Soluções e serviços
+        </h2>
+
+        {/* Cards */}
+        <div className="mt-8 grid w-full grid-cols-3 gap-6">
+          <div className="col-span-1 flex cursor-crosshair flex-col items-end rounded-xl border border-white/10 bg-zinc-900/40 p-2 duration-200 hover:border-white/60">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/assets/iso-vector.svg"
+                className="object-fit"
+                fill
+                alt="iso9001"
+              />
+            </div>
+            <div className="flex flex-col justify-end p-7 text-zinc-200">
+              <h3 className="flex items-center gap-2 font-borna text-xl font-medium">
+                ISO 9001
+              </h3>
+              <p className="mt-1 text-zinc-400">
+                <Balancer>
+                  Qualidade Inteligente: fornecendo requisitos para ISO 9001
+                  para excelência em qualidade.
+                </Balancer>
+              </p>
+            </div>
+          </div>
+          <div className="col-span-1 flex cursor-crosshair flex-col items-end rounded-xl border border-white/10 bg-zinc-900/40 p-2 duration-200 hover:border-white/60">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/assets/nbr-vector.svg"
+                className="object-fit"
+                fill
+                alt="nb15575"
+              />
+            </div>
+            <div className="flex flex-col justify-end p-7 text-zinc-200">
+              <h3 className="flex items-center gap-2 font-borna text-xl font-medium">
+                NBR 15.575
+              </h3>
+              <p className="mt-1 text-zinc-400">
+                <Balancer>
+                  Qualidade Inteligente: fornecendo requisitos para ISO 9001
+                  para excelência em qualidade.
+                </Balancer>
+              </p>
+            </div>
+          </div>
+          <div className="col-span-1 flex cursor-crosshair flex-col items-end rounded-xl border border-white/10 bg-zinc-900/40 p-2 duration-200 hover:border-white/60">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/assets/pbqph-vector.svg"
+                className="object-fit"
+                fill
+                alt="pbqp-h"
+              />
+            </div>
+            <div className="flex flex-col justify-end p-7 text-zinc-200">
+              <h3 className="flex items-center gap-2 font-borna text-xl font-medium">
+                PBQP-H
+              </h3>
+              <p className="mt-1 text-zinc-400">
+                <Balancer>
+                  Qualidade Inteligente: fornecendo requisitos para ISO 9001
+                  para excelência em qualidade.
+                </Balancer>
+              </p>
+            </div>
+          </div>
+          <div className="col-span-full flex cursor-crosshair items-end rounded-xl border border-white/10 bg-zinc-900/40 p-2 duration-200 hover:border-white/60">
+            <div className="relative aspect-video w-full">
+              <Image
+                src="/assets/aditis-vector.svg"
+                className="object-fit"
+                fill
+                alt="aditis"
+              />
+            </div>
+            <div className=" grid h-full grid-rows-2 justify-center p-7 text-zinc-200">
+              <div className="my-auto">
+                <h3 className="flex items-center gap-2 font-borna text-xl font-medium">
+                  Aditis - Controle Tecnológico
+                </h3>
+                <p className="mt-1 text-zinc-400">
+                  <Balancer>
+                    Qualidade Inteligente: fornecendo requisitos para ISO 9001
+                    para excelência em qualidade.
+                  </Balancer>
+                </p>
+              </div>
+              <button className="group mb-2 mt-auto flex items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-white/10 bg-zinc-200 px-6 py-3 font-borna font-medium text-black backdrop-blur-2xl duration-200 hover:border-sky-300">
+                Visitar página
+                <ExternalLink size={18} />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Sobre nós */}
-      <div className="mx-auto mt-32 w-full max-w-7xl rounded-3xl bg-gradient-to-t from-zinc-900/70 to-black/10 p-16">
+      <div className="mx-auto mt-72 w-full max-w-7xl rounded-3xl bg-gradient-to-t from-zinc-900/70 to-black/10 p-16">
         <div className="grid w-full grid-cols-2">
           <div>
             <h2 className="font-borna text-4xl text-white">

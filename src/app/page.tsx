@@ -6,6 +6,7 @@ import { Header } from "./header";
 import { Orgs } from "./orgs";
 import { Void } from "./void";
 import { Footer } from "./footer";
+import { Join } from "./join";
 
 export default function Home() {
   return (
@@ -30,6 +31,10 @@ export default function Home() {
 
       {/* Blog */}
       {/* <Blog /> */}
+
+      {/* Join */}
+      <Join />
+      <Void size={72} />
 
       {/* Footer */}
       <Footer />

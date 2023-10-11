@@ -43,8 +43,12 @@ export function Services() {
           Nossas Soluções
         </h2>
         <p className="text- mt-4 text-neutral-300">
-          Há mais de 20 anos, nos especializamos em soluções para facilitar
+          Por mais de 20 anos, nos especializamos em soluções para facilitar
           certificações e o gerenciamento da qualidade da sua construtora.
+        </p>
+        <p className="text- mt-4 text-neutral-300">
+          Aperfeiçoamos e preparamos os seguintes serviços para você e a sua
+          empresa:
         </p>
       </div>
 
@@ -72,8 +76,8 @@ export function Services() {
                 ISO 9001
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
-                Qualidade Inteligente: fornecendo requisitos para ISO 9001 para
-                excelência em qualidade.
+                ISO 9001 tem foco na gestão da empresa e visa melhorar a
+                qualidade de entrega para o cliente.
               </p>
             </div>
           </div>
@@ -100,8 +104,8 @@ export function Services() {
                 NBR 15.575
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
-                Qualidade Inteligente: fornecendo requisitos para ISO 9001 para
-                excelência em qualidade.
+                NBR 15575 define padrões para edifícios residenciais,
+                assegurando qualidade e segurança.
               </p>
             </div>
           </div>
@@ -128,8 +132,8 @@ export function Services() {
                 PBQP-H
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
-                Qualidade Inteligente: fornecendo requisitos para ISO 9001 para
-                excelência em qualidade.
+                O PBQP-H visa aumentar a qualidade das construções de habitações
+                e infraestruturas urbanas.
               </p>
             </div>
           </div>
@@ -160,8 +164,8 @@ export function Services() {
                 Aditis - Controle Tecnológico
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
-                Qualidade Inteligente: fornecendo requisitos para ISO 9001 para
-                excelência em qualidade.
+                Nossa mais nova solução com parceria Aditis, o controle
+                tecnológico da sua empresa nunca mais será o mesmo.
               </p>
               <button className="mt-auto flex items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
                 Saiba mais

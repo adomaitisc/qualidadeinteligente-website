@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter, DM_Sans } from "next/font/google";
+import { Header } from "./header";
 
 const inter = Inter({ subsets: ["latin"] });
 const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
@@ -16,20 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={dmSans.className}>
-        <div className="fixed left-1/2 top-0 z-20 mx-auto mt-6 grid w-full -translate-x-1/2 place-items-center font-borna text-white">
-          <div className="flex items-center rounded-xl border border-white/10 bg-black/60 p-1 backdrop-blur-sm">
-            <img src="/assets/qi-app.png" className="h-10 w-10" alt="QI" />
-            <span className="px-6">Início</span>
-            <span className="px-6">Soluções</span>
-            <span className="px-6">Sobre nós</span>
-            <div className="h-full rounded-md bg-zinc-300 px-3 py-1.5 font-medium text-black">
-              Entrar em Contato
-            </div>
-          </div>
-        </div>
-        {children}
-      </body>
+      <body className={dmSans.className}>{children}</body>
     </html>
   );
 }

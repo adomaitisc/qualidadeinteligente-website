@@ -10,15 +10,11 @@ import { Join } from "./join";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto max-w-6xl overflow-hidden p-4 pb-0 pt-48 text-white">
+    <main className="relative mx-auto max-w-6xl overflow-hidden p-4 pb-0 text-white">
       <Header />
 
       {/* Hero */}
       <Hero />
-      <Void size={10} />
-
-      {/* Orgs */}
-      <Orgs />
       <Void size={72} />
 
       {/* Services */}
@@ -30,7 +26,8 @@ export default function Home() {
       <Void size={72} />
 
       {/* Blog */}
-      {/* <Blog /> */}
+      <Blog />
+      <Void size={72} />
 
       {/* Join */}
       <Join />

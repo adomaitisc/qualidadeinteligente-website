@@ -11,7 +11,12 @@ export function Footer() {
           className="flex cursor-pointer gap-3 duration-200 hover:text-white"
         >
           {/* Logo */}
-          <Image src="/assets/qi-logo.svg" width={24} height={24} alt="QI" />
+          <Image
+            src="/assets/home/qi-logo.svg"
+            width={24}
+            height={24}
+            alt="QI"
+          />
           <p>Qualidade Inteligente Ltda.</p>
         </Link>
         <div className="flex">

@@ -3,40 +3,46 @@
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
-export function AboutUs() {
+export function About() {
   const [index, setIndex] = useState(0);
   // control the images and the text
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((index) => (index + 1) % 4);
-    }, 5000);
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="w-full rounded-3xl bg-gradient-to-t from-neutral-800/60 via-transparent p-[1px]">
-      <div className="via w-full rounded-3xl bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A] to-transparent p-16">
+    <div className="w-full rounded-3xl bg-gradient-to-t from-white/10 to-transparent p-[1px]">
+      <div className="via w-full rounded-[23px] bg-gradient-to-t from-[#0A0A0A] to-[#050505] p-16">
         <div className="grid w-full grid-cols-2 pb-8">
-          <div className="py-8">
-            <h2 className="font-borna inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text text-2xl font-medium text-transparent">
+          <div className="pb-4 pt-8">
+            <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
               <Balancer>Consultoria da Qualidade com foco em pessoas.</Balancer>
             </h2>
             <p className="my-4 mt-8 text-neutral-300">
-              <Balancer>
-                A Qualidade Inteligente nasceu há mais de 20 anos com a
-                necessidade de prover aquilo de mais importante para a contrução
-                civil: qualidade.
-              </Balancer>
+              A Qualidade Inteligente nasceu há mais de 20 anos com a
+              necessidade de prover aquilo de mais importante para a contrução
+              civil: qualidade.
             </p>
             <p className="mt-4 text-neutral-300">
-              <Balancer>
-                Desde então, a QI vem se especializando em soluções e para
-                facilitar o gerenciamento da qualidade de construtoras e
-                incorporadoras brasileiras.
-              </Balancer>
+              Desde então, a QI vem se especializando em soluções e para
+              facilitar o gerenciamento da qualidade de construtoras e
+              incorporadoras brasileiras.
             </p>
+            <div className="mt-8 flex w-full justify-start">
+              <Link
+                href="/blog"
+                className="flex items-center gap-1 rounded-xl border border-white/10 px-4 py-3 text-sm duration-200 hover:bg-white hover:text-black"
+              >
+                Saiba mais sobre nós <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
           <div className="relative ml-16 h-full overflow-hidden rounded-2xl border border-neutral-800">
             <Image
@@ -44,21 +50,21 @@ export function AboutUs() {
               src={"/assets/home/about/about0.jpg"}
               fill
               aria-selected={index === 1}
-              className="z-20 rounded-xl object-cover opacity-0 brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
+              className="z-20 rounded-xl object-cover opacity-0 shadow-md brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
             />
             <Image
               alt="foto 1"
               src={"/assets/home/about/about1.jpg"}
               fill
               aria-selected={index === 2}
-              className="z-20 rounded-xl object-cover opacity-0 brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
+              className="z-20 rounded-xl object-cover opacity-0 shadow-md brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
             />
             <Image
               alt="foto 2"
               src={"/assets/home/about/about2.jpg"}
               fill
               aria-selected={index === 3}
-              className="z-20 rounded-xl object-cover opacity-0 brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
+              className="z-20 rounded-xl object-cover opacity-0 shadow-md brightness-75 grayscale duration-1000 ease-in-out aria-selected:scale-105 aria-selected:opacity-100 aria-selected:grayscale-[0.3]"
             />
             <div id="noise-wrapper" className="z-10">
               <div id="noise" />
@@ -71,7 +77,7 @@ export function AboutUs() {
             aria-selected={index >= 0 + 1}
             aria-hidden={index != 0 + 1}
           >
-            <div className="font-borna h-1 w-full bg-neutral-600 text-neutral-500">
+            <div className="h-1 w-full bg-neutral-600 font-borna text-neutral-500">
               <div className="h-1 w-0 bg-white duration-1000 ease-in-out group-aria-selected:w-full" />
             </div>
             <h3 className="text-lg">01.</h3>
@@ -86,7 +92,7 @@ export function AboutUs() {
             aria-selected={index >= 1 + 1}
             aria-hidden={index != 1 + 1}
           >
-            <div className="font-borna h-1 w-full bg-neutral-600 text-neutral-500">
+            <div className="h-1 w-full bg-neutral-600 font-borna text-neutral-500">
               <div className="h-1 w-0 bg-white duration-1000 ease-in-out group-aria-selected:w-full" />
             </div>
             <h3 className="text-lg">02.</h3>
@@ -102,7 +108,7 @@ export function AboutUs() {
             aria-selected={index >= 2 + 1}
             aria-hidden={index != 2 + 1}
           >
-            <div className="font-borna h-1 w-full bg-neutral-600 text-neutral-500">
+            <div className="h-1 w-full bg-neutral-600 font-borna text-neutral-500">
               <div className="h-1 w-0 bg-white duration-1000 ease-in-out group-aria-selected:w-full" />
             </div>
             <h3 className="text-lg">03.</h3>

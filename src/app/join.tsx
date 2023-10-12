@@ -4,15 +4,17 @@ import { Forward } from "lucide-react";
 export function Join() {
   return (
     <div className="flex w-full flex-col items-center">
-      <p className="font-borna text-sm text-neutral-700">
-        Faça parte da nossa história e sucesso
-      </p>
-      <div className="mt-4 w-full max-w-2xl rounded-xl border border-white/10 bg-[#0A0A0A] p-8">
-        <h2>Entre em Contato</h2>
-        <p className=" mt-1 text-sm text-neutral-400">
-          Mande-nos uma mensagem e entraremos em contato o mais breve possível.
+      <div className="mb-10 w-full max-w-xl">
+        <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
+          Entre em Contato
+        </h2>
+        <p className="text- mt-4 text-neutral-300">
+          Mande-nos uma mensagem e entraremos em contato com você e sua empresa
+          o mais breve possível.
         </p>
-        <form className="mt-4 grid grid-cols-2 gap-4 text-sm text-neutral-700">
+      </div>
+      <div className="w-full max-w-2xl rounded-xl border border-white/10 bg-[#0A0A0A] p-8">
+        <form className=" grid grid-cols-2 gap-4 text-sm text-neutral-700">
           <div className="flex flex-col gap-1">
             <label htmlFor="client_name">Nome</label>
             <input
@@ -63,9 +65,9 @@ export function Join() {
               Aceito os termos de serviço
             </label>
           </div>
-          <div className="col-span-2 mt-4 flex flex-col items-start gap-1">
-            <button className="font-borna mt-auto flex items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
-              Entrar em contato <Forward size={16} />
+          <div className="col-span-2 mt-2 flex w-full flex-col items-start gap-1">
+            <button className="mt-auto flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
+              Entre em contato com nossa Equipe <Forward size={16} />
             </button>
           </div>
         </form>

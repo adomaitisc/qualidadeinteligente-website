@@ -1,18 +1,19 @@
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import Balancer from "react-wrap-balancer";
 
 import Image from "next/image";
 import { Orgs } from "./orgs";
+import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-8">
+    <div className="flex flex-col items-center justify-center gap-8 py-24">
       <div className="relative h-[700px] w-full overflow-hidden rounded-3xl p-[1px]">
         <div className="relative z-20 h-full w-full overflow-hidden rounded-3xl">
           <div className="absolute z-10 flex h-full w-full items-center gap-8 p-16">
             {/* Text */}
             <div className="w-full">
-              <h1 className="font-borna inline-block bg-gradient-to-r from-white/70 to-white bg-clip-text text-5xl font-semibold leading-none text-transparent">
+              <h1 className="inline-block bg-gradient-to-r from-white/70 to-white bg-clip-text font-borna text-5xl font-semibold leading-none text-transparent">
                 Simplifique a gestão da sua Qualidade
               </h1>
               <p className="mt-4 text-xl font-light text-neutral-300">
@@ -21,10 +22,17 @@ export function Hero() {
                   agilizar o processo de certificação da sua empresa.
                 </Balancer>
               </p>
-              <button className="font-borna mt-8 flex items-center gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-blue-400/20">
-                Entre em Contato
-                <ExternalLink size={18} className="ml-2" />
-              </button>
+              <div className="mt-8 flex gap-4">
+                <button className="flex items-center gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-blue-400/20">
+                  Entre em contato
+                </button>
+                <Link
+                  href="/blog"
+                  className="flex items-center gap-1 rounded-xl border border-white/10 px-4 py-3 text-sm duration-200 hover:bg-white hover:text-black"
+                >
+                  Veja nossas soluções <ArrowRight size={16} />
+                </Link>
+              </div>
             </div>
             {/* Hero Image */}
             <div className="flex h-full w-full max-w-sm items-center justify-end">

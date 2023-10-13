@@ -8,6 +8,8 @@ import { Join } from "./join";
 import { Footer } from "./footer";
 import { Cookie } from "./cookie";
 
+// fetch recent blogs
+
 export default function Home() {
   return (
     <main className="relative mx-auto max-w-6xl overflow-hidden p-4 pb-0 text-white">

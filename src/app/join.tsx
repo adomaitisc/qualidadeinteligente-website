@@ -65,6 +65,16 @@ export function Join() {
               Aceito os termos de serviço
             </label>
           </div>
+          <div className="flex items-center gap-2 ">
+            <Checkbox
+              defaultChecked={true}
+              id="subscribe_newsletter"
+              className="border-white/10"
+            />
+            <label className="text-neutral-300" htmlFor="terms">
+              Desejo me inscrever na Newsletter
+            </label>
+          </div>
           <div className="col-span-2 mt-2 flex w-full flex-col items-start gap-1">
             <button className="mt-auto flex w-full items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
               Entre em contato com nossa Equipe <Forward size={16} />

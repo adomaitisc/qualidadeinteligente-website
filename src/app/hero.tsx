@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center gap-8 py-24">
+    <div className="flex flex-col items-center justify-center gap-8 pb-24 pt-8">
       <div className="relative h-[700px] w-full overflow-hidden rounded-3xl p-[1px]">
         <div className="relative z-20 h-full w-full overflow-hidden rounded-3xl">
           <div className="absolute z-10 flex h-full w-full items-center gap-8 p-16">

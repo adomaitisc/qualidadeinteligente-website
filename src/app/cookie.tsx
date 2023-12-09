@@ -31,7 +31,7 @@ export function Cookie() {
               onClick={() => dismissCookies()}
               className="flex items-center gap-1 rounded-lg border border-white/10 bg-neutral-200 px-3 py-2 text-sm text-black duration-200 hover:bg-transparent hover:text-white"
             >
-              Aceitar
+              Ok
             </button>
           </div>
         </div>

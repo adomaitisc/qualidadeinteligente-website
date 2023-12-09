@@ -82,7 +82,7 @@ export function Services() {
             </div>
             <div className="flex flex-col justify-end p-7 text-neutral-200">
               <h3 className="flex items-center gap-2 font-borna text-base font-medium">
-                ISO 9001
+                ISO <span className="text-sm">9001</span>
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
                 ISO 9001 tem foco na gestão da empresa e visa melhorar a
@@ -110,7 +110,7 @@ export function Services() {
             </div>
             <div className="flex flex-col justify-end p-7 text-neutral-200">
               <h3 className="flex items-center gap-2 font-borna text-base font-medium">
-                NBR 15.575
+                NBR <span className="text-sm">15.575</span>
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
                 NBR 15575 define padrões para edifícios residenciais,

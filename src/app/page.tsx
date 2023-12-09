@@ -32,7 +32,6 @@ export default function Home() {
       <Blog />
       <Void size={72} />
 
-      {/* Join */}
       <Join />
       <Void size={72} />
 

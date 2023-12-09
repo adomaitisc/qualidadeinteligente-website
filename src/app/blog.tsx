@@ -2,6 +2,8 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+// BLOG MUST NOT BE USED AS IT IS NOT A THING YET
+
 export function Blog() {
   return (
     <div className="flex w-full flex-col items-center">
@@ -19,7 +21,7 @@ export function Blog() {
             href="/blog"
             className="flex items-center gap-1 rounded-xl border border-white/10 px-4 py-3 text-sm duration-200 hover:bg-white hover:text-black"
           >
-            Veja todas as publicações <ArrowRight size={16} />
+            Veja nosso conteúdo <ArrowRight size={16} />
           </Link>
         </div>
       </div>
@@ -55,7 +57,7 @@ export function Blog() {
           image="/assets/home/blog/blog4.jpg"
         />
       </div>
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 }

@@ -13,30 +13,24 @@ import { Cookie } from "./cookie";
 export default function Home() {
   return (
     <main className="relative mx-auto max-w-6xl overflow-hidden p-4 pb-0 text-white">
-      <Header />
-      <Cookie />
-
       {/* Hero */}
       <Hero />
-      <Void size={72} />
+      <Void gap={24} />
 
       {/* Services */}
       <Services />
-      <Void size={72} />
+      <Void gap={72} />
 
       {/* About */}
       <About />
-      <Void size={72} />
+      <Void gap={72} />
 
       {/* Blog */}
       <Blog />
-      <Void size={72} />
+      <Void gap={72} />
 
       <Join />
-      <Void size={72} />
-
-      {/* Footer */}
-      <Footer />
+      <Void gap={72} />
     </main>
   );
 }

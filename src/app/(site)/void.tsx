@@ -1,5 +1,5 @@
 type VoidProps = {
-  size:
+  gap:
     | 2
     | 4
     | 6
@@ -19,6 +19,6 @@ type VoidProps = {
     | 96;
 };
 
-export function Void({ size }: VoidProps) {
-  return <div style={{ paddingTop: size * 4 }} />;
+export function Void({ gap }: VoidProps) {
+  return <div style={{ paddingTop: gap * 4 }} />;
 }

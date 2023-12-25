@@ -3,8 +3,8 @@ import Image from "next/image";
 export function Orgs() {
   return (
     <div className="flex w-full flex-col items-center">
-      <p className="font-borna mb-2 text-sm text-neutral-700">
-        Atuando ativamente melhores construtoras
+      <p className="mb-2 font-borna text-sm text-neutral-700">
+        Atuando nas melhores construtoras
       </p>
       <Image
         width={800}

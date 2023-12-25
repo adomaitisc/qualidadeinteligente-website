@@ -1,5 +1,6 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export function Cookie() {
@@ -19,9 +20,25 @@ export function Cookie() {
   }, []);
 
   return (
-    <>
+    <AnimatePresence>
       {shown && (
-        <div className="fixed bottom-16 right-16 z-50 rounded-xl border border-white/10 bg-neutral-900/20 p-4 text-white backdrop-blur-xl">
+        <motion.div
+          initial={{
+            scale: 0.95,
+          }}
+          animate={{
+            scale: 1,
+          }}
+          exit={{
+            scale: 0.95,
+          }}
+          transition={{
+            ease: "easeOut",
+            duration: 0.2,
+            delay: 0.1,
+          }}
+          className="fixed bottom-16 right-16 z-50 rounded-xl border border-white/10 bg-neutral-900/20 p-4 text-white backdrop-blur-xl"
+        >
           <div className="flex max-w-6xl items-center gap-4">
             <p className="text-sm text-neutral-200">
               Nós usamos cookies para personalizar o conteúdo
@@ -31,11 +48,11 @@ export function Cookie() {
               onClick={() => dismissCookies()}
               className="flex items-center gap-1 rounded-lg border border-white/10 bg-neutral-200 px-3 py-2 text-sm text-black duration-200 hover:bg-transparent hover:text-white"
             >
-              Ok
+              Aceitar
             </button>
           </div>
-        </div>
+        </motion.div>
       )}
-    </>
+    </AnimatePresence>
   );
 }

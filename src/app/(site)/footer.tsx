@@ -47,10 +47,9 @@ export function Footer() {
         <div className="col-span-2 flex justify-start gap-16">
           <div className="flex flex-col gap-4">
             <p className="text-white">Institucional</p>
-            <FooterLink>Início</FooterLink>
-            <FooterLink>Soluções</FooterLink>
+            <FooterLink href="/">Início</FooterLink>
+            <FooterLink href="/conteudo">Conteúdo</FooterLink>
             <FooterLink>Sobre nós</FooterLink>
-            <FooterLink>Blog</FooterLink>
           </div>
           <div className="flex flex-col gap-4">
             <p className="text-white">Soluções</p>
@@ -60,6 +59,10 @@ export function Footer() {
             <FooterLink external>
               Aditis <ExternalLink size={14} />
             </FooterLink>
+          </div>
+          <div className="flex flex-col gap-4">
+            <p className="text-white">Outro</p>
+            <FooterLink href="/admin">Painel Administrador</FooterLink>
           </div>
         </div>
       </div>

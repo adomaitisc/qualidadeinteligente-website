@@ -8,6 +8,7 @@ import { PostContent, PostContentState } from "../components/post-content";
 import { PostImage } from "../components/post-image";
 import { Send } from "lucide-react";
 import { NewConfirmation } from "../components/new-confirmation";
+import { useRouter } from "next/navigation";
 
 export type NewPostType = {
   title: string;
@@ -22,6 +23,7 @@ export type NewPostType = {
 };
 
 export function NewPost({ author }: { author: string }) {
+  const router = useRouter();
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
   const [postContent, setPostContent] = useState<NewPostType>({
     title: "Nova Postagem",
@@ -90,7 +92,11 @@ export function NewPost({ author }: { author: string }) {
       },
       body: JSON.stringify(getPrunedContent()),
     }).then((res) => {
-      alert(res.status);
+      if (res.status === 200) {
+        router.push("/admin");
+      } else {
+        alert("Houve um erro, tente novamente mais tarde.");
+      }
     });
   }
 

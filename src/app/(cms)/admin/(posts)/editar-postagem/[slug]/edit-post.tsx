@@ -91,13 +91,13 @@ export function EditPost({ post }: { post: EditPostProps }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(getPrunedContent()),
-    })
-      .then((res) => {
-        alert(res.status);
-      })
-      .then(() => {
+    }).then((res) => {
+      if (res.status === 200) {
         router.push("/admin");
-      });
+      } else {
+        alert("Houve um erro, tente novamente mais tarde.");
+      }
+    });
   }
 
   return (

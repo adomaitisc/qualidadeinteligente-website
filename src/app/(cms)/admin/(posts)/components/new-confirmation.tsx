@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
 export function NewConfirmation({
   isOpen,
@@ -10,10 +9,8 @@ export function NewConfirmation({
 }: {
   isOpen: boolean;
   close: () => void;
-  submitPost: (userId: string) => void;
+  submitPost: () => void;
 }) {
-  const [userId, setUserId] = useState("");
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -42,7 +39,7 @@ export function NewConfirmation({
                 Cancelar
               </button>
               <button
-                onClick={() => submitPost(userId)}
+                onClick={() => submitPost()}
                 className="flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm duration-200 hover:bg-white hover:text-black disabled:pointer-events-none"
               >
                 Postar

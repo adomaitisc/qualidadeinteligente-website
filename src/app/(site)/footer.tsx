@@ -62,7 +62,7 @@ export function Footer() {
           </div>
           <div className="flex flex-col gap-4">
             <p className="text-white">Outro</p>
-            <FooterLink href="/admin">Painel Administrador</FooterLink>
+            <FooterLink href="/admin">Painel</FooterLink>
           </div>
         </div>
       </div>

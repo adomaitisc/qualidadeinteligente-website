@@ -28,6 +28,14 @@ export const columns: ColumnDef<Post>[] = [
   {
     accessorKey: "title",
     header: "Título",
+    cell: ({ row }) => {
+      const post = row.original;
+      return (
+        <div className="flex">
+          <span className="line-clamp-2">{post.title}</span>
+        </div>
+      );
+    },
   },
   {
     accessorKey: "category",
@@ -35,10 +43,10 @@ export const columns: ColumnDef<Post>[] = [
     cell: ({ row }) => {
       const post = row.original;
       return (
-        <div>
-          <span className="rounded-full border border-white/10 bg-neutral-900/50 px-2 py-0.5 text-neutral-300">
-            {post.category}
-          </span>
+        <div className="flex">
+          <p className="mr-auto rounded-full border border-white/10 bg-neutral-900/50 px-2 py-0.5 text-neutral-300">
+            <span className="line-clamp-1 truncate">{post.category}</span>
+          </p>
         </div>
       );
     },
@@ -46,6 +54,16 @@ export const columns: ColumnDef<Post>[] = [
   {
     accessorKey: "date",
     header: "Data",
+    cell: ({ row }) => {
+      const post = row.original;
+      return (
+        <div className="flex">
+          <span className="line-clamp-1 truncate">
+            {new Date(post.date).toLocaleDateString("pt-BR")}
+          </span>
+        </div>
+      );
+    },
   },
   {
     accessorKey: "author",

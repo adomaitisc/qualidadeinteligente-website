@@ -1,4 +1,5 @@
 import { conn } from "@/app/db";
+import { generateSlug } from "../slug";
 
 type RequestData = {
   title: string;
@@ -11,16 +12,6 @@ type RequestData = {
   author: string;
   content: any;
 };
-
-function generateSlug(title: string): string {
-  // Convert the title to lowercase and replace spaces with hyphens
-  const slug = title.toLowerCase().replace(/\s+/g, "-");
-
-  // Remove any non-alphanumeric characters and hyphens at the beginning/end
-  const cleanSlug = slug.replace(/[^a-z0-9-]/g, "").replace(/^-+|-+$/g, "");
-
-  return cleanSlug;
-}
 
 export async function POST(
   request: Request,

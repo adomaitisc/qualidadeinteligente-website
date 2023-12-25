@@ -1,5 +1,5 @@
 import { ChevronDown, ChevronUp, Delete } from "lucide-react";
-import { ContentProps } from "./new-content";
+import { ContentProps } from "./post-content";
 
 export function ContentControls({
   moveElementUp,

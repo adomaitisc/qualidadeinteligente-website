@@ -1,15 +1,15 @@
 "use client";
 
 import { Void } from "@/app/(site)/void";
-import { NewDetails } from "./components/new-details";
+import { PostDetails } from "../components/post-details";
 import { useEffect, useState } from "react";
 import { ValueOf } from "next/dist/shared/lib/constants";
-import { NewContent, NewContentState } from "./components/new-content";
-import { NewImage } from "./components/new-image";
+import { PostContent, PostContentState } from "../components/post-content";
+import { PostImage } from "../components/post-image";
 import { Send } from "lucide-react";
-import { ConfirmationModal } from "./components/confirmation-modal";
+import { NewConfirmation } from "../components/new-confirmation";
 
-export type NewPost = {
+export type NewPostType = {
   title: string;
   image: {
     src: string;
@@ -18,19 +18,19 @@ export type NewPost = {
   date: Date;
   author: string;
   category: string;
-  content: NewContentState;
+  content: PostContentState;
 };
 
-export default function Page() {
+export function NewPost({ author }: { author: string }) {
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
-  const [postContent, setPostContent] = useState<NewPost>({
+  const [postContent, setPostContent] = useState<NewPostType>({
     title: "Nova Postagem",
     image: {
       src: "https://source.unsplash.com/random?construction",
       alt: "",
     },
     date: new Date(),
-    author: "",
+    author: author,
     category: "Categoria",
     content: [],
   });
@@ -39,8 +39,8 @@ export default function Page() {
     key,
     value,
   }: {
-    key: keyof NewPost;
-    value: ValueOf<NewPost>;
+    key: keyof NewPostType;
+    value: ValueOf<NewPostType>;
   }) {
     setPostContent((prev) => {
       return {
@@ -80,8 +80,8 @@ export default function Page() {
     return state;
   }
 
-  async function submitPost(userId: string) {
-    updateContent({ key: "author", value: userId });
+  async function submitPost() {
+    updateContent({ key: "author", value: author });
 
     await fetch("/api/postagem", {
       method: "POST",
@@ -96,19 +96,20 @@ export default function Page() {
 
   return (
     <main className="mx-auto max-w-5xl text-white">
-      <NewImage
+      <PostImage
         updateContent={updateContent}
         src={postContent.image.src}
         alt={postContent.image.alt}
       />
       {/* Title date and category */}
-      <NewDetails
+      <PostDetails
         updateContent={updateContent}
-        title="Nova Postagem"
-        category="Categoria"
+        title={postContent.title}
+        category={postContent.category}
+        date={postContent.date}
       />
       {/* Content */}
-      <NewContent updateContent={updateContent}>
+      <PostContent updateContent={updateContent}>
         <button
           onClick={() => {
             setIsConfirmationModalOpen(true);
@@ -119,9 +120,9 @@ export default function Page() {
           Postar
           <Send size={16} />
         </button>
-      </NewContent>
+      </PostContent>
       <Void gap={36} />
-      <ConfirmationModal
+      <NewConfirmation
         isOpen={isConfirmationModalOpen}
         close={() => setIsConfirmationModalOpen(false)}
         submitPost={submitPost}

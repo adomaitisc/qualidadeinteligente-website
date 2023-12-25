@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { BookCopy } from "lucide-react";
+import { AdminLogOut } from "./admin-logout";
 
 export function AdminHeader() {
   const pathname = usePathname();
@@ -18,22 +18,22 @@ export function AdminHeader() {
         <div className="z-10 flex gap-6 px-4">
           <Link
             href="/"
-            aria-disabled={pathname === "/"}
             className="cursor-pointer whitespace-nowrap duration-150 hover:text-neutral-400 aria-disabled:pointer-events-none aria-disabled:text-neutral-400"
           >
-            Início
+            Página Inicial
           </Link>
           <Link
-            href="/conteudo"
-            aria-disabled={pathname === "/conteudo"}
+            href="/admin"
+            aria-disabled={pathname === "/admin"}
             className="cursor-pointer whitespace-nowrap duration-150 hover:text-neutral-400 aria-disabled:pointer-events-none aria-disabled:text-neutral-400"
           >
-            Conteúdo
+            Postagens
           </Link>
+          <AdminLogOut />
         </div>
-        <button className="flex h-full shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border border-black/10 bg-white px-3 py-1.5 font-borna font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/5">
-          Nova Postagem <BookCopy size={16} />
-        </button>
+        {/* <button className="flex h-full shrink-0 items-center gap-2 overflow-hidden whitespace-nowrap rounded-lg border border-black/10 bg-white px-3 py-1.5 font-borna font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/5">
+          Sair <LogOut size={16} />
+        </button> */}
       </div>
     </div>
   );

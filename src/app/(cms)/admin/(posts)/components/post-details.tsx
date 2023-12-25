@@ -1,25 +1,27 @@
 "use client";
 
 import { ValueOf } from "next/dist/shared/lib/constants";
-import { NewPost } from "../page";
+import { NewPostType } from "../nova-postagem/new-post";
 
-type NewDetailsProps = {
+type PostDetailsProps = {
   updateContent: ({
     key,
     value,
   }: {
-    key: keyof NewPost;
-    value: ValueOf<NewPost>;
+    key: keyof NewPostType;
+    value: ValueOf<NewPostType>;
   }) => void;
   title: string;
   category: string;
+  date: Date;
 };
 
-export function NewDetails({
+export function PostDetails({
   updateContent,
   title,
   category,
-}: NewDetailsProps) {
+  date,
+}: PostDetailsProps) {
   return (
     <div className="mx-auto mt-16 max-w-4xl border-b-[0.5px] border-white/20 pb-4">
       <input
@@ -38,7 +40,7 @@ export function NewDetails({
         className="w-full rounded-md bg-transparent text-2xl font-medium outline-none ring-0 duration-1000 focus:animate-pulse focus:bg-white/5 focus:outline-none focus:ring-0"
       />
       <div className="mt-2 flex gap-1 text-neutral-500">
-        <p>{new Date().toLocaleDateString()}</p>
+        <p>{date.toLocaleDateString()}</p>
       </div>
     </div>
   );

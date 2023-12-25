@@ -17,8 +17,6 @@ async function getPostBySlug(slug: string) {
 export default async function Page({ params }: { params: { slug: string } }) {
   const post = await getPostBySlug(params.slug);
 
-  console.log(post);
-
   // convert content from string to object
   const content = JSON.parse(post.content);
 

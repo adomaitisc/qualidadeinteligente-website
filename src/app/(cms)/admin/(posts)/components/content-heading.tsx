@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
-import { ContentProps } from "./new-content";
 import TextareaAutosize from "react-textarea-autosize";
+import { ContentProps } from "./post-content";
 import { ContentControls } from "./content-controls";
 
-export function ContentParagraph({
+export function ContentHeading({
   moveElementUp,
+  children,
   moveElementDown,
   discardElement,
   setElementText,
@@ -22,9 +23,10 @@ export function ContentParagraph({
             discardElement();
           }
         }}
-        placeholder="Texto"
+        placeholder="Título"
+        defaultValue={children}
         onChange={(e) => setElementText!(e.target.value)}
-        className="w-full resize-none rounded-md bg-transparent p-0  outline-none ring-0 focus:animate-pulse focus:bg-white/5 focus:outline-none focus:ring-0 group-hover:bg-white/5"
+        className="w-full resize-none rounded-md bg-transparent p-0 text-xl font-medium  outline-none ring-0 duration-0 focus:animate-pulse focus:bg-white/5 focus:outline-none focus:ring-0 group-hover:bg-white/5"
       />
       <ContentControls
         moveElementUp={moveElementUp}

@@ -1,20 +1,20 @@
 import Image from "next/image";
 import { ValueOf } from "next/dist/shared/lib/constants";
-import { NewPost } from "../page";
+import { NewPostType } from "../nova-postagem/new-post";
 
 type PostImageProps = {
   updateContent: ({
     key,
     value,
   }: {
-    key: keyof NewPost;
-    value: ValueOf<NewPost>;
+    key: keyof NewPostType;
+    value: ValueOf<NewPostType>;
   }) => void;
   src: string;
   alt: string;
 };
 
-export function NewImage({ updateContent, src, alt }: PostImageProps) {
+export function PostImage({ updateContent, src, alt }: PostImageProps) {
   return (
     <div className="relative aspect-video w-full overflow-hidden rounded-b-3xl border-b border-l border-r border-white/20 shadow-lg shadow-white/5">
       {src.length > 0 && (

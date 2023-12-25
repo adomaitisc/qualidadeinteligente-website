@@ -1,22 +1,23 @@
 "use client";
 
 import { ValueOf } from "next/dist/shared/lib/constants";
-import { NewPost } from "../page";
 import { useEffect, useRef, useState } from "react";
 import { Image, Send, Text, Type } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ContentHeading } from "./content-heading";
 import { ContentParagraph } from "./content-paragraph";
 import { ContentImage } from "./content-image";
+import { NewPostType } from "../nova-postagem/new-post";
 
-type NewContentProps = {
+type PostContentProps = {
   children: React.ReactNode;
+  content?: PostContentState;
   updateContent: ({
     key,
     value,
   }: {
-    key: keyof NewPost;
-    value: ValueOf<NewPost>;
+    key: keyof NewPostType;
+    value: ValueOf<NewPostType>;
   }) => void;
 };
 
@@ -35,14 +36,21 @@ function generateUniqueId() {
   return timestamp + randomString;
 }
 
-export type NewContentState = {
+export type PostContentState = {
   id: string;
   key: keyof ContentState;
   value: ValueOf<ContentState>;
 }[];
 
-export function NewContent({ children, updateContent }: NewContentProps) {
-  const [contentState, setContentState] = useState<NewContentState>([]);
+export function PostContent({
+  children,
+  content,
+  updateContent,
+}: PostContentProps) {
+  const [contentState, setContentState] = useState<PostContentState>(
+    content || []
+  );
+  console.log(content);
 
   function addHeading() {
     setContentState((prev) => [

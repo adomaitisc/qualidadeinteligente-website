@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ContentProps } from "./new-content";
+import { ContentProps } from "./post-content";
 import { ContentControls } from "./content-controls";
 import Image from "next/image";
 
@@ -35,6 +35,7 @@ export function ContentImage({
               setImageSrc!(e.target.value);
             }
           }}
+          defaultValue={src}
           placeholder="https://link-da-imagem.com"
           className="w-full rounded-lg bg-white/20 px-2 py-1 text-sm outline-none ring-0 backdrop-blur-xl"
         />
@@ -44,6 +45,7 @@ export function ContentImage({
               setImageAlt!(e.target.value);
             }
           }}
+          defaultValue={alt}
           placeholder="Descrição"
           className="w-full rounded-lg bg-white/20 px-2 py-1 text-sm outline-none ring-0 backdrop-blur-xl"
         />

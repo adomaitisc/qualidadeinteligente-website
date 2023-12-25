@@ -1,12 +1,15 @@
-import Link from "next/link";
-import { BookCopy } from "lucide-react";
-import AdminPosts from "./admin-posts";
+import { currentUser } from "@clerk/nextjs";
+import AdminPosts from "./components/admin-posts";
 
-export default function AdminPage() {
+export default async function AdminPage() {
+  const user = await currentUser();
   return (
     <main className="mx-auto max-w-5xl pt-24">
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl">Administrar Conteúdo</h1>
+      <div className="flex flex-col">
+        <h1 className="text-2xl">
+          Olá, {user?.firstName + " " + user?.lastName}
+        </h1>
+        <p className="text-neutral-400">Administre postagens do blog da QI.</p>
       </div>
       <div className="pt-4" />
       <AdminPosts />

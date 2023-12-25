@@ -24,7 +24,7 @@ export function BlogList({ posts }: { posts: website_PostType[] }) {
                 {post.title}
               </h1>
               <p className="text-sm text-neutral-500">
-                {new Date(post.date).toLocaleDateString()}
+                {new Date(post.date).toLocaleDateString()} por {post.author}
               </p>
             </Link>
           );

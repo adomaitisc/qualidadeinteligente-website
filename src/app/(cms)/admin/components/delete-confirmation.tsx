@@ -1,19 +1,16 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
-export function ConfirmationModal({
+export function DeleteConfirmation({
   isOpen,
   close,
-  submitPost,
+  deletePost,
 }: {
   isOpen: boolean;
   close: () => void;
-  submitPost: (userId: string) => void;
+  deletePost: () => void;
 }) {
-  const [userId, setUserId] = useState("");
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -29,22 +26,23 @@ export function ConfirmationModal({
             className="flex flex-col items-center gap-4 rounded-3xl border border-white/10 bg-neutral-900/20 p-6 text-white backdrop-blur-xl"
           >
             <h1 className="text-center text-lg font-medium">
-              Confimar Postagem
+              Excluir Conteúdo
             </h1>
             <p className="text-sm text-neutral-200">
-              Digite seu id de usuário para postar
+              Tem certeza que deseja excluir este conteúdo?
             </p>
-            <div className="flex w-full gap-4 px-4">
-              <input
-                onChange={(e) => setUserId(e.target.value)}
-                className="w-full rounded-xl bg-white/20 px-4 py-2 text-sm outline-none ring-0 backdrop-blur-xl"
-                placeholder="ID de usuário"
-              />
+            <div className="flex w-full items-center justify-center gap-4 px-4">
               <button
-                onClick={() => submitPost(userId)}
+                onClick={() => close()}
                 className="flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm duration-200 hover:bg-white hover:text-black disabled:pointer-events-none"
               >
-                Postar
+                Cancelar
+              </button>
+              <button
+                onClick={() => deletePost()}
+                className="flex items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm duration-200 hover:bg-white hover:text-black disabled:pointer-events-none"
+              >
+                Excluir
               </button>
             </div>
           </motion.div>

@@ -1,7 +1,8 @@
 import { ClerkProvider } from "@clerk/nextjs";
-import "../globals.css";
+import "../../globals.css";
 import { ptBR } from "@clerk/localizations";
 import { dark } from "@clerk/themes";
+import { AdminHeader } from "./admin-header";
 
 export default function RootLayout({
   children,
@@ -19,7 +20,10 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <AdminHeader />
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );

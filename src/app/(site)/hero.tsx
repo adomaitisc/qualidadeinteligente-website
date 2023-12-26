@@ -26,7 +26,7 @@ export function Hero() {
                 </Balancer>
               </p>
               <div className="mt-8 flex flex-col gap-4 md:flex-row">
-                <button className=" items-center gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
+                <button className="flex items-center gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/20">
                   Entre em contato
                 </button>
                 <Link

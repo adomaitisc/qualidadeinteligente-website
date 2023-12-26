@@ -10,7 +10,7 @@ export function BlogList({ posts }: { posts: website_PostType[] }) {
 
   return (
     <div className="mx-auto w-full max-w-5xl">
-      <div className="grid min-h-full w-full max-w-5xl grid-cols-2 gap-12">
+      <div className="grid min-h-full w-full max-w-5xl grid-cols-1 gap-12 md:grid-cols-2">
         {posts.map((post) => {
           // if (index >= limit) return;
           return (

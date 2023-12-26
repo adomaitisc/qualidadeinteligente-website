@@ -76,74 +76,81 @@ export const columns: ColumnDef<Post>[] = [
   {
     id: "actions",
     cell: ({ row }) => {
-      const [isConfirmationModalOpen, setIsConfirmationModalOpen] =
-        useState(false);
       const post = row.original;
-      const router = useRouter();
-
-      function deletePost() {
-        fetch(`/api/postagem/${post.id}`, {
-          method: "DELETE",
-        }).then(() => {
-          router.refresh();
-        });
-      }
-
-      return (
-        <>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <MoreVertical
-                size={16}
-                className="cursor-pointer rounded-md text-white hover:text-white/80"
-              />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent
-              align="end"
-              side="bottom"
-              className="flex flex-col gap-1 rounded-xl border border-white/10 bg-neutral-900/20 p-2 text-white backdrop-blur-3xl"
-            >
-              <DropdownMenuItem
-                className="cursor-pointer rounded-md hover:bg-black/40"
-                asChild
-              >
-                <Link href={`/conteudo/${post.slug}`} target="_blank">
-                  Abrir
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                className="cursor-pointer rounded-md hover:bg-black/40"
-                onClick={() =>
-                  navigator.clipboard.writeText(
-                    window.location.origin + "/conteudo/" + post.slug
-                  )
-                }
-              >
-                Copiar Link
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                asChild
-                className="cursor-pointer rounded-md hover:bg-black/40"
-              >
-                <Link href={`admin/editar-postagem/${post.slug}`}>Editar</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem
-                onClick={() => {
-                  setIsConfirmationModalOpen(true);
-                }}
-                className="cursor-pointer rounded-md hover:bg-black/40"
-              >
-                Excluir
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <DeleteConfirmation
-            isOpen={isConfirmationModalOpen}
-            close={() => setIsConfirmationModalOpen(false)}
-            deletePost={deletePost}
-          />
-        </>
-      );
+      return <RowActions post={post} />;
     },
   },
 ];
+
+type RowActionsProps = {
+  post: Post;
+};
+
+function RowActions({ post }: RowActionsProps) {
+  const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
+  const router = useRouter();
+
+  function deletePost() {
+    fetch(`/api/postagem/${post.id}`, {
+      method: "DELETE",
+    }).then(() => {
+      router.refresh();
+    });
+  }
+
+  return (
+    <>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <MoreVertical
+            size={16}
+            className="cursor-pointer rounded-md text-white hover:text-white/80"
+          />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          align="end"
+          side="bottom"
+          className="flex flex-col gap-1 rounded-xl border border-white/10 bg-neutral-900/20 p-2 text-white backdrop-blur-3xl"
+        >
+          <DropdownMenuItem
+            className="cursor-pointer rounded-md hover:bg-black/40"
+            asChild
+          >
+            <Link href={`/conteudo/${post.slug}`} target="_blank">
+              Abrir
+            </Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            className="cursor-pointer rounded-md hover:bg-black/40"
+            onClick={() =>
+              navigator.clipboard.writeText(
+                window.location.origin + "/conteudo/" + post.slug
+              )
+            }
+          >
+            Copiar Link
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            asChild
+            className="cursor-pointer rounded-md hover:bg-black/40"
+          >
+            <Link href={`admin/editar-postagem/${post.slug}`}>Editar</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => {
+              setIsConfirmationModalOpen(true);
+            }}
+            className="cursor-pointer rounded-md hover:bg-black/40"
+          >
+            Excluir
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+      <DeleteConfirmation
+        isOpen={isConfirmationModalOpen}
+        close={() => setIsConfirmationModalOpen(false)}
+        deletePost={deletePost}
+      />
+    </>
+  );
+}

@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("px-4", dmSans.className)}>{children}</body>
+      <body className={dmSans.className}>{children}</body>
     </html>
   );
 }

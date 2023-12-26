@@ -3,8 +3,15 @@
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft } from "lucide-react";
 import Link from "next/link";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "@/components/ui/carousel";
 
 export function About() {
   const [index, setIndex] = useState(0);
@@ -19,8 +26,8 @@ export function About() {
 
   return (
     <div className="w-full rounded-3xl bg-gradient-to-t from-white/10 to-transparent p-[1px]">
-      <div className="via w-full rounded-[23px] bg-gradient-to-t from-[#0A0A0A] to-[#050505] p-16">
-        <div className="grid w-full grid-cols-2 pb-8">
+      <div className="via w-full rounded-[23px] bg-gradient-to-t from-[#0A0A0A] to-[#050505] p-3 md:p-16">
+        <div className="grid w-full grid-cols-1 pb-8 md:grid-cols-2">
           <div className="pb-4 pt-8">
             <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
               <Balancer>Consultoria da Qualidade com foco em pessoas.</Balancer>
@@ -44,7 +51,7 @@ export function About() {
               </Link>
             </div>
           </div>
-          <div className="relative ml-16 h-full overflow-hidden rounded-2xl border border-neutral-800">
+          <div className="relative ml-16 hidden h-full overflow-hidden rounded-2xl border border-neutral-800 md:block">
             <Image
               alt="foto 0"
               src={"/assets/home/about/about0.jpg"}
@@ -71,7 +78,7 @@ export function About() {
             </div>
           </div>
         </div>
-        <div className="mt-16 grid grid-cols-3 gap-8 text-sm">
+        <div className="mt-16 hidden grid-cols-3 gap-8 text-sm md:grid">
           <div
             className="group space-y-2 duration-500 aria-hidden:opacity-50"
             aria-selected={index >= 0 + 1}
@@ -120,6 +127,38 @@ export function About() {
             </p>
           </div>
         </div>
+        <Carousel className="mx-10 md:hidden">
+          <CarouselContent>
+            <CarouselItem>
+              <h3 className="text-lg">01.</h3>
+              <p className="text-white">
+                Nossa história começou em 2000, quando tivemos nosso primeiro
+                contato com sistemas de gestão de qualidade, certificando as
+                primeiras construtoras no Qualihab/CDHU.
+              </p>
+            </CarouselItem>
+            <CarouselItem>
+              <h3 className="text-lg">02.</h3>
+              <p className="text-white">
+                Trabalhamos intensamente por 10 anos, crescendo de 2 para 28
+                clientes, com um aumento médio de 34% ao mês. Nesse tempo,
+                desenvolvemos nossa abordagem única para atender às necessidades
+                dos clientes.
+              </p>
+            </CarouselItem>
+            <CarouselItem>
+              <h3 className="text-lg">03.</h3>
+              <p className="text-white">
+                Atualmente, atendemos 49 clientes com mais de 500 auditorias
+                concluídas. Montamos uma equipe excepcional ao longo dos anos,
+                entregando resultados sólidos graças ao nosso compromisso com
+                relacionamento, eficiência, técnica e resultados.
+              </p>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious className="text-black" />
+          <CarouselNext className="text-black" />
+        </Carousel>
       </div>
     </div>
   );

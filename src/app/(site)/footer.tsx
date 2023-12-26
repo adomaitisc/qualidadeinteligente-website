@@ -5,7 +5,7 @@ import Link from "next/link";
 export function Footer() {
   return (
     <div className="mx-auto max-w-4xl rounded-t-3xl bg-gradient-to-b from-white/10 to-transparent p-[1px] pb-0">
-      <div className="flex h-72 gap-32 rounded-t-[23px] bg-gradient-to-b from-[#0A0A0A] to-[#050505] p-16 text-sm text-neutral-400">
+      <div className="flex flex-wrap gap-8 rounded-t-[23px] bg-gradient-to-b from-[#0A0A0A] to-[#050505] p-10 text-sm text-neutral-400 md:h-72 md:gap-32 md:p-16">
         <div className="flex h-full flex-col justify-between ">
           <Link
             href="/"
@@ -20,7 +20,7 @@ export function Footer() {
             />
             <p>Qualidade Inteligente Ltda.</p>
           </Link>
-          <div className="flex">
+          <div className="mt-4 flex md:mt-0">
             <Link
               href="https://www.linkedin.com/company/qualidadeinteligente/"
               target="_blank"
@@ -44,7 +44,7 @@ export function Footer() {
             </Link>
           </div>
         </div>
-        <div className="col-span-2 flex justify-start gap-16">
+        <div className="col-span-2 flex justify-start gap-8 md:gap-16">
           <div className="flex flex-col gap-4">
             <p className="text-white">Institucional</p>
             <FooterLink href="/">Início</FooterLink>

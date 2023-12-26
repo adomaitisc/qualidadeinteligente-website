@@ -37,7 +37,7 @@ export function Services() {
   }, [cardsRef]);
 
   return (
-    <div className="mx-auto flex w-full max-w-5xl flex-col items-center">
+    <div className="mx-auto flex w-full max-w-5xl flex-col items-center px-3 md:px-0">
       {/* Title */}
       <div className="mb-10 w-full max-w-xl">
         <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
@@ -65,7 +65,7 @@ export function Services() {
       <div
         ref={cardsRef}
         id="cards"
-        className="relative grid w-full grid-cols-3 gap-4"
+        className="relative grid w-full grid-cols-1 gap-4 md:grid-cols-3"
       >
         <ServiceCard
           title="ISO"
@@ -90,7 +90,7 @@ export function Services() {
 
         <div
           id="card"
-          className="relative col-span-full h-72 cursor-crosshair rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out"
+          className="relative col-span-full hidden h-72 cursor-crosshair rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out md:block"
         >
           <div id="card-border" />
           <div

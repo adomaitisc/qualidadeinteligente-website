@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Newsletter() {
   return (
-    <div className="mx-auto grid w-full max-w-4xl place-items-center">
+    <div className="mx-auto grid w-full max-w-4xl place-items-center px-3 md:px-0">
       <div className="w-full max-w-xl">
         <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
           Inscreva-se na nossa Newsletter

@@ -12,7 +12,7 @@ export function PostDetails({
   author,
 }: PostDetailsProps) {
   return (
-    <div className="mx-auto mt-16 max-w-4xl border-b-[0.5px] border-white/20 pb-4">
+    <div className="mx-auto mt-16 max-w-4xl border-b-[0.5px] border-white/20 px-3 pb-4 md:px-0">
       <p className="text-neutral-500">{category}</p>
       <h1 className="text-2xl font-medium duration-200 group-hover:underline">
         {title}

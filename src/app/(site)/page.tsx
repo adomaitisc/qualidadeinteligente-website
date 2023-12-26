@@ -12,7 +12,7 @@ import { Cookie } from "./cookie";
 
 export default function Home() {
   return (
-    <main className="relative mx-auto max-w-6xl overflow-hidden p-4 pb-0 text-white">
+    <main className="relative mx-auto w-full max-w-6xl overflow-hidden p-1 pb-0 text-white md:p-4">
       {/* Hero */}
       <Hero />
       <Void gap={24} />

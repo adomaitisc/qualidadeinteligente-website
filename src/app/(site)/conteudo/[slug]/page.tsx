@@ -21,7 +21,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const content = JSON.parse(post.content);
 
   return (
-    <main className="mx-auto max-w-5xl text-white">
+    <main className="mx-auto max-w-5xl px-1 text-white">
       <PostHero src={post.image_src} alt={post.image_src} />
       {/* Title date and category */}
       <PostDetails
@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         author={post.author}
       />
       {/* Content */}
-      <div className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 text-lg text-neutral-200">
+      <div className="mx-auto mt-8 flex max-w-4xl flex-col gap-4 px-3 text-lg text-neutral-200 md:px-0">
         {content.map((item: any) => {
           if (item.key === "heading") {
             return (

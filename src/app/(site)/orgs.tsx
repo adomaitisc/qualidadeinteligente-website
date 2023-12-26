@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Orgs() {
   return (
-    <div className="flex w-full flex-col items-center">
+    <div className="hidden w-full flex-col items-center md:flex">
       <p className="mb-2 font-borna text-sm text-neutral-700">
         Atuando nas melhores construtoras
       </p>

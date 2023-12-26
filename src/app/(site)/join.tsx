@@ -4,7 +4,7 @@ import { Forward } from "lucide-react";
 export function Join() {
   return (
     <div className="flex w-full flex-col items-center">
-      <div className="mb-10 w-full max-w-xl">
+      <div className="mb-10 w-full max-w-xl px-3 md:px-0">
         <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
           Entre em Contato
         </h2>
@@ -13,7 +13,7 @@ export function Join() {
           o mais breve possível.
         </p>
       </div>
-      <div className="w-full max-w-2xl rounded-xl border border-white/10 bg-[#0A0A0A] p-8">
+      <div className="w-full max-w-2xl rounded-xl border border-white/10 bg-[#0A0A0A] p-4 md:p-8">
         <form className=" grid grid-cols-2 gap-4 text-sm text-neutral-700">
           <div className="flex flex-col gap-1">
             <label htmlFor="client_name">Nome</label>

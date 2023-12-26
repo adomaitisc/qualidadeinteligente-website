@@ -9,7 +9,7 @@ export function Blog() {
   return (
     <div className="flex w-full flex-col items-center">
       {/* Title */}
-      <div className="mb-10 w-full max-w-xl">
+      <div className="mb-10 w-full max-w-xl px-3 md:p-0">
         <h2 className="inline-block bg-gradient-to-r from-white/60 to-white bg-clip-text font-borna text-2xl font-medium text-transparent">
           Postagens Recentes
         </h2>

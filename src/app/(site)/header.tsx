@@ -1,17 +1,19 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { HeaderMenu } from "./header-menu";
 import Link from "next/link";
+import { HeaderMobile } from "./header-mobile";
 
 export function Header() {
   const pathname = usePathname();
   const [passed, setPassed] = useState(pathname !== "/");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   function handleScroll() {
     if (window.scrollY > window.innerHeight / 2) {
@@ -32,8 +34,23 @@ export function Header() {
   }, [pathname]);
 
   return (
-    <div className="fixed left-1/2 top-0 z-50 mx-auto mt-6 -translate-x-1/2 place-items-center font-borna text-white">
-      <div className="relative flex items-center gap-2 rounded-xl border border-white/10 p-1.5 text-sm shadow-lg">
+    <div className="fixed left-1/2 top-0 z-50 mx-auto mt-6 w-full -translate-x-1/2 place-items-center px-4 font-borna text-white md:w-auto">
+      {/* Mobile Nav */}
+      <div className="relative flex w-full items-center justify-between gap-2 rounded-xl border border-white/10 p-1.5 text-sm shadow-lg md:hidden">
+        <div className="pointer-events-none absolute inset-0 z-0 rounded-xl bg-neutral-900/20 backdrop-blur-xl" />
+        <div className="relative h-[34px] w-[34px]">
+          <Image src="/assets/home/qi.png" fill alt="QI" />
+        </div>
+        <div
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="z-10 flex gap-6 px-2"
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </div>
+        {mobileMenuOpen && <HeaderMobile />}
+      </div>
+      {/* Nav */}
+      <div className="relative hidden items-center gap-2 rounded-xl border border-white/10 bg-red-400 p-1.5 text-sm shadow-lg md:flex">
         <div className="pointer-events-none absolute inset-0 z-0 rounded-xl bg-neutral-900/20 backdrop-blur-xl" />
         <div className="relative h-[34px] w-[34px]">
           <Image src="/assets/home/qi.png" fill alt="QI" />
@@ -87,6 +104,7 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
+        d
       </div>
     </div>
   );

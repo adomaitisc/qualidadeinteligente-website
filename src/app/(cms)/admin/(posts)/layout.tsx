@@ -1,3 +1,10 @@
+import { AdminHeader } from "./components/admin-header";
+
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <AdminHeader />
+      {children}
+    </>
+  );
 }

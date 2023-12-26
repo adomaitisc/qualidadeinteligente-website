@@ -2,7 +2,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "../../globals.css";
 import { ptBR } from "@clerk/localizations";
 import { dark } from "@clerk/themes";
-import { AdminHeader } from "./components/admin-header";
+import { AdminHeader } from "./(posts)/components/admin-header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -16,10 +16,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       }}
     >
       <html lang="en">
-        <body>
-          <AdminHeader />
-          {children}
-        </body>
+        <body>{children}</body>
       </html>
     </ClerkProvider>
   );

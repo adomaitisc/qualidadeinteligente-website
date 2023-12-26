@@ -1,5 +1,5 @@
 import { currentUser } from "@clerk/nextjs";
-import AdminPosts from "./(posts)/components/admin-posts";
+import AdminPosts from "../components/admin-posts";
 
 export default async function AdminPage() {
   const user = await currentUser();

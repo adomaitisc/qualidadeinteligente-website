@@ -50,7 +50,7 @@ export function Header() {
         {mobileMenuOpen && <HeaderMobile />}
       </div>
       {/* Nav */}
-      <div className="relative hidden items-center gap-2 rounded-xl border border-white/10 bg-red-400 p-1.5 text-sm shadow-lg md:flex">
+      <div className="relative hidden items-center gap-2 rounded-xl border border-white/10 p-1.5 text-sm shadow-lg md:flex">
         <div className="pointer-events-none absolute inset-0 z-0 rounded-xl bg-neutral-900/20 backdrop-blur-xl" />
         <div className="relative h-[34px] w-[34px]">
           <Image src="/assets/home/qi.png" fill alt="QI" />

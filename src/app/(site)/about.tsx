@@ -1,5 +1,6 @@
 "use client";
 
+import { type CarouselApi } from "@/components/ui/carousel";
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -15,7 +16,23 @@ import {
 
 export function About() {
   const [index, setIndex] = useState(0);
-  // control the images and the text
+
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -127,18 +144,25 @@ export function About() {
             </p>
           </div>
         </div>
-        <Carousel className="mx-10 md:hidden">
+        {/* Mobile View */}
+        <Carousel setApi={setApi} className="md:hidden">
           <CarouselContent>
-            <CarouselItem>
-              <h3 className="text-lg">01.</h3>
+            <CarouselItem
+              aria-current={current == 1}
+              className="basis-5/6 aria-[current=false]:opacity-70"
+            >
+              <h3 className="text-lg  text-neutral-300">01.</h3>
               <p className="text-white">
                 Nossa história começou em 2000, quando tivemos nosso primeiro
                 contato com sistemas de gestão de qualidade, certificando as
                 primeiras construtoras no Qualihab/CDHU.
               </p>
             </CarouselItem>
-            <CarouselItem>
-              <h3 className="text-lg">02.</h3>
+            <CarouselItem
+              aria-current={current == 2}
+              className="basis-5/6 aria-[current=false]:opacity-70"
+            >
+              <h3 className="text-lg text-neutral-300">02.</h3>
               <p className="text-white">
                 Trabalhamos intensamente por 10 anos, crescendo de 2 para 28
                 clientes, com um aumento médio de 34% ao mês. Nesse tempo,
@@ -146,8 +170,11 @@ export function About() {
                 dos clientes.
               </p>
             </CarouselItem>
-            <CarouselItem>
-              <h3 className="text-lg">03.</h3>
+            <CarouselItem
+              aria-current={current == 3}
+              className="basis-5/6 aria-[current=false]:opacity-70"
+            >
+              <h3 className="text-lg text-neutral-300">03.</h3>
               <p className="text-white">
                 Atualmente, atendemos 49 clientes com mais de 500 auditorias
                 concluídas. Montamos uma equipe excepcional ao longo dos anos,
@@ -156,10 +183,26 @@ export function About() {
               </p>
             </CarouselItem>
           </CarouselContent>
-          <CarouselPrevious className="text-black" />
-          <CarouselNext className="text-black" />
         </Carousel>
+        <div className="mt-2 flex items-center justify-center md:hidden">
+          <BallProgress current={current} count={count} />
+        </div>
       </div>
+    </div>
+  );
+}
+
+function BallProgress({ current, count }: { current: number; count: number }) {
+  return (
+    <div className="flex items-center gap-1">
+      {Array.from({ length: count }).map((_, i) => (
+        <div
+          key={i}
+          className={`h-1 w-1 rounded-full ${
+            i === current - 1 ? "bg-white" : "bg-neutral-600"
+          }`}
+        />
+      ))}
     </div>
   );
 }

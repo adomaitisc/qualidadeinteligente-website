@@ -16,13 +16,14 @@ export function Hero() {
           <div className="absolute z-10 flex h-full w-full flex-col items-center justify-center gap-8 p-4 md:flex md:flex-row md:p-16">
             {/* Text */}
             <div className="w-full">
-              <h1 className="inline-block h-16 bg-gradient-to-r from-white/70 to-white bg-clip-text font-borna text-3xl font-semibold leading-none text-transparent md:text-5xl">
-                Simplifique a gestão da sua Qualidade
+              <h1 className="line-clamp-2 inline-block bg-gradient-to-r from-white/70 to-white bg-clip-text font-borna text-3xl font-semibold leading-none text-transparent md:text-5xl">
+                Desbloqueie excelência com consultoria em qualidade
               </h1>
               <p className="mt-4 text-base font-light leading-tight text-neutral-300 md:text-xl md:leading-normal">
                 <Balancer>
-                  Provemos soluções customizadas para melhorar a qualidade e
-                  agilizar o processo de certificação da sua empresa.
+                  Provemos diversas soluções customizadas para melhorar a
+                  qualidade e simplificar o processo de certificação da sua
+                  empresa.
                 </Balancer>
               </p>
               <div className="mt-8 flex flex-col gap-4 md:flex-row">

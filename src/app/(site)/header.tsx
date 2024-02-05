@@ -104,7 +104,6 @@ export function Header() {
             </motion.div>
           )}
         </AnimatePresence>
-        d
       </div>
     </div>
   );

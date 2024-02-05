@@ -90,7 +90,7 @@ export function Services() {
 
         <div
           id="card"
-          className="relative col-span-full hidden h-72 cursor-crosshair rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out md:block"
+          className="relative col-span-full rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out md:block md:h-72"
         >
           <div id="card-border" />
           <div
@@ -99,9 +99,9 @@ export function Services() {
               width: "calc(100% - 2px)",
             }}
             id="card-content"
-            className="relative m-[1px] flex h-full rounded-[11px] bg-[#0A0A0A] p-2"
+            className="relative m-[1px] flex h-full flex-col rounded-[11px] bg-[#0A0A0A] p-2 md:flex-row"
           >
-            <div className="relative mx-auto aspect-video w-3/4">
+            <div className="relative aspect-video w-full md:mx-auto md:w-3/4">
               <Image
                 src="/assets/home/aditis-vector.svg"
                 className="object-fit"
@@ -109,16 +109,16 @@ export function Services() {
                 alt="aditis"
               />
             </div>
-            <div className="relative flex h-full flex-col justify-between p-7 text-neutral-200">
+            <div className="relative flex flex-col justify-between p-7 text-neutral-200 md:h-full ">
               <h3 className="flex items-center gap-2 font-borna text-base font-medium">
                 Aditis - Controle Tecnológico
               </h3>
               <p className="mt-1 text-sm text-neutral-400">
-                Nossa mais nova solução com parceria Aditis, o controle
-                tecnológico da sua empresa nunca mais será o mesmo.
+                Software projetado para inovar o controle tecnológico de
+                concreto nas suas obras.
               </p>
-              <button className="mt-auto flex items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/5">
-                Visite Aditis
+              <button className="mt-4 flex items-center justify-between gap-2 whitespace-nowrap rounded-xl border border-black/10 bg-white px-6 py-3 font-borna text-sm font-medium text-black backdrop-blur-sm duration-300 hover:border-white/20 hover:bg-transparent hover:text-white hover:shadow-lg hover:shadow-white/5 md:mt-auto">
+                Disponível em breve
                 <ExternalLink size={18} />
               </button>
             </div>

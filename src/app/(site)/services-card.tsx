@@ -19,7 +19,7 @@ export function ServiceCard({
   return (
     <div
       id="card"
-      className="relative flex cursor-crosshair flex-col items-end rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out"
+      className="relative flex flex-col items-end rounded-xl bg-white/10 shadow-lg duration-300 ease-in-out"
     >
       <div id="card-border" />
       <div

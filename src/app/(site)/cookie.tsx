@@ -22,7 +22,7 @@ export function Cookie() {
   return (
     <AnimatePresence>
       {shown && (
-        <div className="fixed bottom-0 z-50 flex w-screen justify-end p-2 md:p-16">
+        <div className="pointer-events-none fixed bottom-0 z-50 flex w-screen justify-end p-2 md:p-16">
           <motion.div
             initial={{
               scale: 0.95,
@@ -38,7 +38,7 @@ export function Cookie() {
               duration: 0.2,
               delay: 0.1,
             }}
-            className="rounded-xl border border-white/10 bg-neutral-900/20 p-4 text-white backdrop-blur-xl"
+            className="pointer-events-auto rounded-xl border border-white/10 bg-neutral-900/20 p-4 text-white backdrop-blur-xl"
           >
             <div className="flex max-w-sm items-center gap-4">
               <p className="text-xs text-neutral-200 md:text-sm">

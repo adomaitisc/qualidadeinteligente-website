@@ -49,9 +49,10 @@ export function Footer() {
             <p className="text-white">Institucional</p>
             <FooterLink href="/">Início</FooterLink>
             <FooterLink href="/conteudo">Conteúdo</FooterLink>
+            <FooterLink>Soluções</FooterLink>
             <FooterLink>Sobre nós</FooterLink>
           </div>
-          <div className="flex flex-col gap-4">
+          {/* <div className="flex flex-col gap-4">
             <p className="text-white">Soluções</p>
             <FooterLink>ISO 9001</FooterLink>
             <FooterLink>NBR 15.575</FooterLink>
@@ -59,10 +60,11 @@ export function Footer() {
             <FooterLink external>
               Aditis <ExternalLink size={14} />
             </FooterLink>
-          </div>
+          </div> */}
           <div className="flex flex-col gap-4">
             <p className="text-white">Outro</p>
             <FooterLink href="/admin">Painel</FooterLink>
+            <FooterLink>Entre em contato</FooterLink>
           </div>
         </div>
       </div>
